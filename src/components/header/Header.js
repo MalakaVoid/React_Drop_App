@@ -49,9 +49,11 @@ export default function Header(){
                     <div className='favourite'>
                         <HeartIcon />
                     </div>
-                    <div className='user'>
-                        <UserIcon />
-                    </div>
+                    <a href='/account'>
+                        <div className='user'>
+                            <UserIcon />
+                        </div>
+                    </a>
                     <div className='cart'>
                         <CartIcon />
                     </div>

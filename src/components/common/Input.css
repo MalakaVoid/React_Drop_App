@@ -1,0 +1,29 @@
+.custom-input-container{
+    position: relative;
+}
+.custom-input-container input{
+    width: 100%;
+    font-size: 16px;
+    line-height: 32px;
+
+    background-color: transparent;
+
+    padding: 0 5px;
+    position: relative;
+}
+.custom-input-container::after{
+    content: "";
+    width: 100%;
+    bottom: -2px;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    background: black;
+}
+.custom-input-container input, 
+.custom-input-container input:focus,
+.custom-input-container input:valid{
+    outline: none;
+}

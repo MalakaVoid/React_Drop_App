@@ -1,0 +1,133 @@
+.menu-root{
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 350px;
+    height: 100vh;
+
+    background-color: rgba(27, 27, 27, 0.9);
+
+    box-sizing: border-box;
+
+    padding: 0 30px;
+    z-index: 10;
+}
+.menu-root .close-container{
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+}
+.menu-root .close-btn{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+.menu-root .menu-content{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: calc(100% - 80px);
+
+    text-transform: uppercase;
+
+    color: white;
+    font-size: 18px;
+    line-height: 24px;
+
+    padding-top: 10px;
+    padding-bottom: 10%;
+}
+.menu-root .menu-content a{
+    position: relative;
+    display: inline-flex;
+}
+.menu-root .menu-content a:after{
+    content: "";
+    width: 100%;
+    bottom: -2px;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    background: white;
+    transition:  .3s ease 0s;
+    transform: scale(0);
+}
+.menu-root .menu-content a:hover::after{
+    transform: scale(100%);
+}
+.menu-root .clothes-block,
+.menu-root .delivery-block,
+.menu-root .about-block{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    width: 100%;
+}
+.menu-root .delivery-block{
+    margin-top: 20px;
+}
+.menu-root .about-block{
+    margin-top: auto;
+}
+.menu-root .cm-logos{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 40px;
+}
+.menu-root .cm-logos a{   
+    display: block;
+}
+.menu-root .cm-logos a::after{
+    display: none;
+}
+.menu-root .yt-logo svg path,
+.menu-root .yt-logo svg,
+.menu-root .vk-logo svg path,
+.menu-root .vk-logo svg,
+.menu-root .tg-logo svg path,
+.menu-root .tg-logo svg,
+.menu-root .tk-logo svg path,
+.menu-root .tk-logo svg{
+    fill: rgb(88, 88, 88);
+    transition: 0.25s;
+}
+.menu-root .yt-logo:hover svg path,
+.menu-root .yt-logo:hover svg{
+    fill: red;
+}
+.menu-root .vk-logo:hover svg path,
+.menu-root .vk-logo:hover svg{
+    fill: cornflowerblue;
+}
+.menu-root .tg-logo:hover svg path,
+.menu-root .tg-logo:hover svg{
+    fill: cornflowerblue;
+}
+.menu-root .tk-logo:hover svg path,
+.menu-root .tk-logo:hover svg{
+    fill: black;
+}
+/* CSS TRANSITION ANIMATION */
+.menu-root-enter {
+    transform: translateX(-100%);
+}
+.menu-root-enter-active {
+    transform: translateX(0);
+    transition: transform 500ms;
+}
+.menu-root-exit {
+    transform: translateX(0);
+}
+.menu-root-exit-active {
+    transform: translateX(-100%);
+    transition: transform 500ms;
+}

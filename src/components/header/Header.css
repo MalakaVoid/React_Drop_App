@@ -1,0 +1,81 @@
+header{
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70px;
+    max-height: 80px;
+
+    background-color: white;
+    z-index: 100;
+}
+header .header-content{
+    width: inherit;
+    height: inherit;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    padding: 0 30px;
+}
+
+header .menu,
+header .user-nav div{
+    width: 28px;
+    height: 28px;
+    box-sizing: content-box;
+}
+header .menu-btn{
+    width: inherit;
+    height: inherit;
+    cursor: pointer;
+}
+
+header .logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 300px;
+    height: 35px;
+
+    text-align: center;
+
+    font-size: 30px;
+    line-height: 35px;
+
+    cursor: pointer;
+}
+
+header .user-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+}
+/* CSS TRANSITION  */
+
+.menu-btn-ts-enter {
+    opacity: 1;
+}
+.menu-btn-ts-enter-active {
+    opacity: 0;
+    transition: opacity 100ms;
+}
+.menu-btn-ts-exit {
+    opacity: 0;
+}
+.menu-btn-ts-exit-active {
+    opacity: 1;
+    transition: opacity 100ms;
+}

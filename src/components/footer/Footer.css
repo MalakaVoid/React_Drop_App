@@ -1,0 +1,68 @@
+footer{
+    width: 100%;
+
+    padding: 100px 30px 15px 30px;
+    box-sizing: border-box;
+
+    background-color: #DCDCDC;
+}
+footer .footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* gap: 450px; */
+
+    width: 100%;
+
+    margin-bottom: 100px;
+}
+footer .link-blocks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+
+}
+footer .link-blocks > div{
+    display: flex;
+    flex-direction: column;
+    /* min-width: 270px; */
+    /* gap: 20px; */
+}
+footer .link-blocks > div h3{
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+footer .link-blocks > div a{
+    font-size: 16px;
+    color: #909090;
+    /* opacity: 0.8; */
+    display: inline-block;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+footer .link-blocks > div a:hover{
+    /* opacity: 1; */
+    color: black;
+    transition: 0.25s;
+}
+footer .form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 50%;
+}
+footer .bottom-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+footer .bottom-container .laws{
+    font-weight: bold;
+
+}

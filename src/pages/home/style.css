@@ -1,0 +1,23 @@
+
+.banners{
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+.home_categoroes{
+    width: 100%;
+}
+.recomended_section{
+    width: 100%;
+
+    margin-top: 40px;
+    /* padding: 0 30px; */
+
+    box-sizing: border-box;
+
+}

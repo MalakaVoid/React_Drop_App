@@ -1,0 +1,74 @@
+.categories_wrapper{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    height: calc(100vh - 70px);
+}
+.categories_wrapper .categories_row{
+    display: flex;
+    flex-direction: row;
+
+    width: inherit;
+    height: 50%;
+}
+
+.categories_wrapper .categories_row > a{
+    flex: 1;
+
+    cursor: pointer;
+
+    color: var(--white-main);
+    font-size: 32px;
+    text-align: center;
+
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* background-color: aqua; */
+    height: 100%;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.categories_wrapper .categories_row > a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: 0.25s;
+}
+.categories_wrapper .categories_row span{
+    z-index: 2;
+    position: relative;
+}
+.categories_wrapper .categories_row span::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    background-color: var(--white-main);
+    height: 2px;
+    transform: scaleX(0);
+    z-index: 2;
+    transition: all 0.25s;
+}
+.categories_wrapper .categories_row > a:hover::before{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.categories_wrapper .categories_row > a:hover > span::after{
+    transform: scaleX(1);
+}

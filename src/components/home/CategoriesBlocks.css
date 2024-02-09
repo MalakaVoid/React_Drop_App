@@ -67,7 +67,7 @@
     transition: all 0.25s;
 }
 .categories_wrapper .categories_row > a:hover::before{
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .categories_wrapper .categories_row > a:hover > span::after{
     transform: scaleX(1);

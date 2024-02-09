@@ -18,7 +18,7 @@ const recomended_items = [
     {
         id: 1,
         title: 'Юбка женская',
-        articul: 'Юбка женская',
+        articul: 'AR123AA',
         price: 131313,
         sizes: ['XS', 'S', 'M', 'L', 'XL'],
         img: blueDress

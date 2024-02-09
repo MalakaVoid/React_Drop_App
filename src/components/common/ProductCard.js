@@ -8,9 +8,9 @@ export default function ProductCard({product_info}){
                 <img src={product_info.img}/>
             </div>
             <h3 className='product_card_title'>{product_info.title}</h3>
-            <p className='article'>{product_info.articul}</p>
-            <hr />
-            <div className='price'>{product_info.price}</div>
+            <p className='product_card_article'>{product_info.articul}</p>
+            <div className='product_card_devider'/>
+            <div className='product_card_price'>{product_info.price} ₽</div>
         </div>
     )
 }

@@ -15,11 +15,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 :root{
   --main-black: #131313;
   --sup-black: #808080;
   --white-main: #ffffff;
 
   --footer-bg: #E9E9E9;
+}
+
+@media (min-width: 1025px){
+  :root{
+    --text-title: 32px;
+    --text-main: 20px;
+    --text-mini: 16px;
+  }
+}
+@media (max-width: 1024px){
+  :root{
+    --text-title: 28px;
+    --text-main: 20px;
+    --text-mini: 16px;
+  }
+}
+@media (max-width: 650px){
+  :root{
+    --text-title: 20px;
+    --text-main: 20px;
+    --text-mini: 16px;
+  }
 }

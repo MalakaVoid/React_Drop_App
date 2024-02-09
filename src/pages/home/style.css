@@ -1,11 +1,29 @@
-
+@media (min-width: 1025px){
+    .banners{
+        width: 100%;
+        min-height: 100vh;
+    }
+}
+@media (max-width: 1024px){
+    .banners{
+        width: 100%;
+        min-height: 70vh;
+    }
+}
+@media (max-width: 650px){
+    .banners{
+        width: 100%;
+        min-height: 70vh;
+    }
+}
+body{
+    overflow-x: hidden;
+}
 .banners{
+    margin-top: 70px;
     position: relative;
 
     display: block;
-
-    width: 100%;
-    min-height: 100vh;
 
     overflow-x: hidden;
 }
@@ -16,7 +34,6 @@
     width: 100%;
 
     margin-top: 40px;
-    /* padding: 0 30px; */
 
     box-sizing: border-box;
 

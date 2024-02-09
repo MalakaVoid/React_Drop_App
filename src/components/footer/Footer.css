@@ -1,15 +1,70 @@
+@media (min-width: 1025px){
+    footer{
+        padding: 100px 30px 15px 30px;
+    }
+    footer .footer-container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    footer .link-blocks{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+    }
+    footer .form-container{
+        width: 50%;
+    }
+}
+@media (max-width: 1024px){
+    footer{
+        padding: 100px 20px 15px 20px;
+    }
+    footer .footer-container{
+        flex-direction: column-reverse;
+        justify-content: none;
+        align-items: center;
+        gap: 40px;
+    }
+    footer .link-blocks{
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        gap: 20px;
+    }
+    footer .form-container{
+        width: 50%;
+    }
+}
+@media (max-width: 650px){
+    footer{
+        padding: 100px 10px 15px 10px;
+    }
+    footer .footer-container{
+        flex-direction: column-reverse;
+        justify-content: none;
+    }
+    footer .link-blocks{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+    footer .form-container{
+        width: 100%;
+    }
+}
 footer{
     width: 100%;
 
-    padding: 100px 30px 15px 30px;
     box-sizing: border-box;
 
     background-color: #DCDCDC;
+
+    margin-top: 20px;
 }
 footer .footer-container{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     /* gap: 450px; */
 
     width: 100%;
@@ -18,23 +73,19 @@ footer .footer-container{
 }
 footer .link-blocks{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 50%;
 
 }
 footer .link-blocks > div{
+    width: 240px;
     display: flex;
     flex-direction: column;
-    /* min-width: 270px; */
-    /* gap: 20px; */
 }
 footer .link-blocks > div h3{
     font-size: 18px;
     color: black;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 footer .link-blocks > div a{
     font-size: 16px;
@@ -53,8 +104,6 @@ footer .form-container{
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    width: 50%;
 }
 footer .bottom-container{
     display: flex;
@@ -64,5 +113,4 @@ footer .bottom-container{
 }
 footer .bottom-container .laws{
     font-weight: bold;
-
 }

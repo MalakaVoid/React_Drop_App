@@ -1,7 +1,24 @@
+@media (min-width: 1025px){
+    .leave-comment-block{
+        width: 350px;
+        align-items: none;
+    }
+}
+@media (max-width: 1024px){
+    .leave-comment-block{
+        width: 350px;
+        align-items: center;
+    }
+}
+@media (max-width: 650px){
+    .leave-comment-block{
+        width: 100%;
+        align-items: center;
+    }
+}
 .leave-comment-block{
     display: flex;
     flex-direction: column;
-    width: 350px;
     /* max-width: 350px; */
 
 }

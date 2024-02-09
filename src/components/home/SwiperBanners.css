@@ -1,12 +1,21 @@
- .swiper_banners{
+@media (min-width: 1025px){
+
+}
+@media (max-width: 1024px){
+
+}
+@media (max-width: 650px){
+    
+}
+.swiper_banners{
     width: 100%;
 
     position: absolute;
     top: 0;
     left: 0;
 
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
  }
   .custom_bunner_swiper {
     width: 100%;

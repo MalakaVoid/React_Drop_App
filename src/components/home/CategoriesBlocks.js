@@ -43,6 +43,7 @@ export default function CategoriesBlocks() {
     if (windowWidth < 1024){ 
         return(
             <Swiper
+            loop={true}
             slidesPerView={'auto'}
             spaceBetween={0}
             className="categories_wrapper"

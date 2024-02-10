@@ -3,11 +3,17 @@
         width: 100%;
         min-height: 100vh;
     }
+    .recomended_section{
+        margin-top: 40px;
+    }
 }
 @media (max-width: 1024px){
     .banners{
         width: 100%;
         min-height: 70vh;
+    }
+    .recomended_section{
+        margin-top: 20px;
     }
 }
 @media (max-width: 650px){
@@ -20,7 +26,7 @@ body{
     overflow-x: hidden;
 }
 .banners{
-    margin-top: 70px;
+    /* margin-top: 70px; */
     position: relative;
 
     display: block;
@@ -32,8 +38,6 @@ body{
 }
 .recomended_section{
     width: 100%;
-
-    margin-top: 40px;
 
     box-sizing: border-box;
 

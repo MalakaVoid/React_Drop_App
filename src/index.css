@@ -40,7 +40,7 @@ code {
 @media (max-width: 650px){
   :root{
     --text-title: 20px;
-    --text-main: 20px;
+    --text-main: 16px;
     --text-mini: 16px;
   }
 }

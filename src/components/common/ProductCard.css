@@ -106,8 +106,6 @@
     border: solid var(--main-black) 1px;
 
     padding: 0 12px;
-
-    margin-top: 10px;
 }
 .product_card_price_button:hover{
     transition: 0.25s;
@@ -144,4 +142,18 @@
     padding: 10px;
 
     z-index: 9;
+}
+.product_card_buttons_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
+    margin-top: 10px;
+
+}
+.product_card_favorite_button{
+    width: 20px;
+    height: 20px;
+    margin-right: 1px;
 }

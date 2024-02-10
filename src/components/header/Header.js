@@ -18,43 +18,49 @@ import { CSSTransition } from 'react-transition-group';
 export default function Header(){
     const [isMenuOpen, setMenuOpen] = useState(false);
     const hideShowMenu = function(){
-        setMenuOpen(!isMenuOpen)
+        setMenuOpen(!isMenuOpen);
+        if (!isMenuOpen){
+            document.body.classList.add('no_scroll');
+        }
+        else{
+            document.body.classList.remove('no_scroll');
+        }
     };
     const transitionRef = useRef(null);
 
     return (
         <header>
-            <div className='header-content'>
+            <div className='header_wrapper'>
                 <div className='menu'>
                     <CSSTransition
                     ref={transitionRef}
                     in={!isMenuOpen}
                     timeout={100}
-                    classNames={'menu-btn-ts'}
+                    classNames={'header_menu_button_ts'}
                     mountOnEnter
                     unmountOnExit
                     >
-                        <div className='menu-btn' onClick={hideShowMenu}>
+                        <div className='header_menu_button' onClick={hideShowMenu}>
                             <MenuIcon />        
                         </div>
                     </CSSTransition>
                 </div>
-                <div className='logo'>
+                <div className='header_logo'>
                     Shop ?
                 </div>
-                <div className='user-nav'>
-                    <div className='search'>
+                <div className='header_nav_items'>
+                    <div className='header_search_button'>
                         <SearchIcon />
                     </div>
-                    <div className='favourite'>
+                    <div className='header_favourite_button'>
                         <HeartIcon />
                     </div>
                     <a href='/account'>
-                        <div className='user'>
+                        <div className='header_user_button'>
                             <UserIcon />
                         </div>
                     </a>
-                    <div className='cart'>
+                    <div className='header_cart_button'>
                         <CartIcon />
                     </div>
                 </div>

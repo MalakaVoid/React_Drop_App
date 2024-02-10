@@ -1,3 +1,32 @@
+@media (min-width: 1025px){
+    header{
+        height: 70px;
+    }
+    header .header_wrapper{
+        padding: 0 30px;
+    }
+}
+@media (max-width: 1024px){
+    header{
+        height: 70px;
+    }
+    header .header_wrapper{
+        padding: 0 20px;
+    }
+}
+@media (max-width: 650px){
+    header{
+        height: 55px;
+    }
+    header .header_wrapper{
+        padding: 0 10px;
+    }
+    .header_user_button,
+    .header_favourite_button,
+    .header_search_button{
+        display: none;
+    }
+}
 header{
     position: fixed;
 
@@ -5,13 +34,12 @@ header{
     left: 0;
 
     width: 100%;
-    height: 70px;
     max-height: 80px;
 
     background-color: white;
     z-index: 100;
 }
-header .header-content{
+header .header_wrapper{
     width: inherit;
     height: inherit;
 
@@ -23,23 +51,14 @@ header .header-content{
     align-items: center;
 
     box-sizing: border-box;
-
-    padding: 0 30px;
 }
-
-header .menu,
-header .user-nav div{
-    width: 28px;
-    height: 28px;
-    box-sizing: content-box;
-}
-header .menu-btn{
+header .headeheader_menu_button{
     width: inherit;
     height: inherit;
     cursor: pointer;
 }
 
-header .logo{
+header .header_logo{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -57,7 +76,7 @@ header .logo{
     cursor: pointer;
 }
 
-header .user-nav{
+header .header_nav_items{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -65,17 +84,30 @@ header .user-nav{
 }
 /* CSS TRANSITION  */
 
-.menu-btn-ts-enter {
+.header_menu_button_ts-enter {
     opacity: 1;
 }
-.menu-btn-ts-enter-active {
+.header_menu_button_ts-enter-active {
     opacity: 0;
     transition: opacity 100ms;
 }
-.menu-btn-ts-exit {
+.header_menu_button_ts-exit {
     opacity: 0;
 }
-.menu-btn-ts-exit-active {
+.header_menu_button_ts-exit-active {
     opacity: 1;
     transition: opacity 100ms;
+}
+.header_user_button{
+    width: 26px;
+    height: 30px;
+}
+.header_favourite_button{
+    width: 34px;
+    height: 30px;
+}
+.header_search_button,
+.header_cart_button{
+    width: 30px;
+    height: 30px;
 }

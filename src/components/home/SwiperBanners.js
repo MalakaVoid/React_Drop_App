@@ -32,7 +32,6 @@ export default function SwiperBanners() {
   };
 
   return (
-    <div className='swiper_banners'>
       <Swiper
         loop={true}
         pagination={pagination}
@@ -47,6 +46,5 @@ export default function SwiperBanners() {
             )
         })}
       </Swiper>
-    </div>
   );
 }

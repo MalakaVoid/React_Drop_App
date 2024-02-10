@@ -1,26 +1,15 @@
 @media (min-width: 1025px){
-    .banners{
-        width: 100%;
-        min-height: 100vh;
-    }
     .recomended_section{
         margin-top: 40px;
     }
 }
 @media (max-width: 1024px){
-    .banners{
-        width: 100%;
-        min-height: 70vh;
-    }
     .recomended_section{
         margin-top: 20px;
     }
 }
 @media (max-width: 650px){
-    .banners{
-        width: 100%;
-        min-height: 70vh;
-    }
+
 }
 body{
     overflow-x: hidden;
@@ -32,6 +21,9 @@ body{
     display: block;
 
     overflow-x: hidden;
+
+    width: 100%;
+
 }
 .home_categoroes{
     width: 100%;

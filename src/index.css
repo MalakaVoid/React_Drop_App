@@ -9,6 +9,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 code {
@@ -43,4 +46,8 @@ code {
     --text-main: 16px;
     --text-mini: 16px;
   }
+}
+
+body.no_scroll{
+  overflow-y: hidden;
 }

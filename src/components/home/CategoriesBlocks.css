@@ -41,6 +41,8 @@
     }
 }
 .categories_wrapper{
+    max-height: 1000px;
+    min-height: 300px;
     width: 100%;
 
     display: flex;

@@ -6,6 +6,10 @@ import YoutubeLogo from '../../../assets/socialMediaLogos/YoutubeLogo';
 import VkLogo from '../../../assets/socialMediaLogos/VkLogo';
 import TelegramLogo from '../../../assets/socialMediaLogos/TelegramLogo';
 import TikTokLogo from '../../../assets/socialMediaLogos/TikTokLogo';
+import UserIcon from '../../../assets/icons/UserIcon';
+import HeartIcon from '../../../assets/icons/HeartIcon';
+import SearchIcon from '../../../assets/icons/SearchIcon';
+import MenuIcon from '../../../assets/icons/MenuIcon';
 // REACT
 import {CSSTransition } from 'react-transition-group';
 import { useRef } from 'react';
@@ -29,16 +33,16 @@ export default function MenuPanel({active, hideMenu}){
             <div className='menu-content'>
                 <div className='clothes-block'>
                     <div><a href='/' >Смотреть все</a></div>
-                    <div><a href='/' >ВЕЧЕРНИЕ ПЛАТЬЯ</a></div>
-                    <div><a href='/' >ПОВСЕДНЕВНЫЕ ПЛАТЬЯ</a></div>
-                    <div><a href='/' >ТЁПЛЫЕ ПЛАТЬЯ</a></div>
-                    <div><a href='/' >БЛУЗКИ/БОДИ/ТУНИКИ</a></div>
+                    <div><a href='/' >ПЛАТЬЯ</a></div>
+                    <div><a href='/' >КОСТЮМЫ</a></div>
                     <div><a href='/' >ЮБКИ</a></div>
-                    <div><a href='/' >КАРДИГАНЫ И ПИДЖАКИ</a></div>
                     <div><a href='/' >БРЮКИ</a></div>
+                    <div><a href='/' >БЛУЗКИ И РУБАШКИ</a></div>
+                    <div><a href='/' >СВИТЕРА И КАРДИГАНЫ</a></div>
+                    <div><a href='/' >ТОЛСТОВКИ И СВИТШОТЫ</a></div>
                     <div><a href='/' >СВИТЕРА И ДЖЕМПЕРЫ</a></div>
-                    <div><a href='/' >КУРТКИ</a></div>
-                    <div><a href='/' >ПАЛЬТО</a></div>
+                    <div><a href='/' >ЖИЛЕТЫ</a></div>
+                    <div><a href='/' >ВЕРХНЯЯ ОДЕЖДА</a></div>
                 </div>
                 <div className='delivery-block'>
                     <div><a href='/' >ДОСТАВКА И ОПЛАТА</a></div>
@@ -63,6 +67,20 @@ export default function MenuPanel({active, hideMenu}){
                         <TikTokLogo />
                     </a>
                 </div>
+                <div className='menu_nav_bar_blank'></div>
+            </div>
+            <div className='menu_nav_bar_wrapper'>
+                <div className='menu_search_button'>
+                    <SearchIcon color='white' />
+                </div>
+                <div className='menu_favourite_button'>
+                    <HeartIcon color='white' />
+                </div>
+                <a href='/account'>
+                    <div className='menu_user_button'>
+                        <UserIcon color='white' />
+                    </div>
+                </a>
             </div>
         </div>
         </CSSTransition>

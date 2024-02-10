@@ -8,6 +8,7 @@
     }
     .recomended_more{
         right: 30px;
+        bottom: 0;
     }
 }
 @media (max-width: 1024px){
@@ -20,6 +21,7 @@
     }
     .recomended_more{
         right: 20px;
+        bottom: 0;
     }
 }
 @media (max-width: 650px){

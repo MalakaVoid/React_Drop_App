@@ -3,6 +3,7 @@ import Button from './Button';
 import './ProductCard.css';
 import SizePicker from './SizePicker';
 import useWindowWidth from '../../hooks/useWindowWidth';
+import HeartIcon from '../../assets/icons/HeartIcon';
 
 export default function ProductCard({product_info}){
     const windowWidth = useWindowWidth();
@@ -14,7 +15,10 @@ export default function ProductCard({product_info}){
                     <img src={product_info.img}/>
                 </div>
                 <h3 className='product_card_title'>{product_info.title}</h3>
-                <div><a className='product_card_price_button'>{product_info.price} ₽</a></div>
+                <div className='product_card_buttons_wrapper'>
+                    <a className='product_card_price_button'>{product_info.price} ₽</a>
+                    <a className='product_card_favorite_button'><HeartIcon /></a>
+                </div>
             </div>
         )
     }

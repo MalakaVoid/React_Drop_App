@@ -5,6 +5,7 @@ import costume from '../../assets/categories/costume.jfif';
 import sport from '../../assets/categories/sport.jfif';
 import palto from '../../assets/categories/palto.jfif';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import useWindowWidth from '../../hooks/useWindowWidth';
 
@@ -47,10 +48,15 @@ export default function CategoriesBlocks() {
             slidesPerView={'auto'}
             spaceBetween={0}
             className="categories_wrapper"
+            autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay]}
             >
-                {categories_data.map((category)=>{
+                {categories_data.map((category, index)=>{
                     return (
-                        <SwiperSlide><a className='categories_wrapper_link' style={{backgroundImage: `url(${category.img})`}}>
+                        <SwiperSlide key={index}><a className='categories_wrapper_link' style={{backgroundImage: `url(${category.img})`}}>
                             <span>{category.text}</span>
                         </a></SwiperSlide>
                     )
@@ -61,9 +67,9 @@ export default function CategoriesBlocks() {
     else{
         return (
             <div className="categories_wrapper" >
-                {categories_data.map((category)=>{
+                {categories_data.map((category, index)=>{
                     return (
-                        <a className='categories_wrapper_link' style={{backgroundImage: `url(${category.img})`}}>
+                        <a key={index} className='categories_wrapper_link' style={{backgroundImage: `url(${category.img})`}}>
                             <span>{category.text}</span>
                         </a>
                     )

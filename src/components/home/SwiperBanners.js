@@ -11,18 +11,36 @@ import './SwiperBanners.css';
 // IMAGES
 import banner1 from '../../assets/Banner.jpg';
 import banner2 from '../../assets/banner2.jpg';
+import bannerMob from '../../assets/BannerMob.jpg';
 import arrowIcon from '../../assets/icons/arrow-icon.svg';
 
 // import required modules
 import { Pagination } from 'swiper/modules';
+import useWindowWidth from '../../hooks/useWindowWidth';
 
 export default function SwiperBanners() {
-    const slides = [
+  const windowWidth = useWindowWidth();
+
+    const slidesDesctop = [
         {img: banner1},
         {img: banner2},
         {img: banner1},
         {img: banner2},
     ]
+    const slidesMobile = [
+        {img: bannerMob},
+        {img: banner2},
+        {img: banner1},
+        {img: banner2},
+    ]
+
+    const getBanners = ()=>{
+      if (windowWidth < 650){ 
+        return slidesMobile;
+      }else{
+          return slidesDesctop;
+      }
+    }
 
   const pagination = {
     clickable: true,
@@ -38,9 +56,9 @@ export default function SwiperBanners() {
         modules={[Pagination]}
         className="custom_bunner_swiper"
       >
-        {slides.map((slide)=>{
+        {getBanners().map((slide, index)=>{
             return(
-                <SwiperSlide>
+                <SwiperSlide key={index}>
                     <img src={slide.img}/>
                 </SwiperSlide> 
             )

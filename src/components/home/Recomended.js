@@ -31,7 +31,7 @@ export default function Recomended({title, recomended_items}) {
             className="cards_swiper"
             >
             {recomended_items.map((recomended_item)=>{
-                return (<SwiperSlide className='cards_swiper_slide'><ProductCard product_info={recomended_item}/></SwiperSlide>)
+                return (<SwiperSlide key={recomended_item.id} className='cards_swiper_slide'><ProductCard product_info={recomended_item}/></SwiperSlide>)
             })}
             </Swiper>
             </div>

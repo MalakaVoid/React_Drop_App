@@ -11,7 +11,7 @@ import MenuIcon from '../../assets/icons/MenuIcon';
 import MenuPanel from './menuPanel/MenuPanel';
 import BgExitBlock from './menuPanel/BgExitBlock';
 // REACT
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 // Transitions
 import { CSSTransition } from 'react-transition-group';
 
@@ -28,8 +28,26 @@ export default function Header(){
     };
     const transitionRef = useRef(null);
 
+    const [headerBG, setHeaderBG] = useState({backgroundColor: 'rgba(0,0,0,0)'})
+
+    const headerBGOpacity = ()=>{
+        if (window.scrollY < 10){
+            setHeaderBG({backgroundColor: 'rgba(0,0,0,0)'});
+            console.log(1);
+        } else{
+            setHeaderBG({backgroundColor: 'var(--white-main)'});
+        }
+    };
+
+    useEffect(()=>{
+        window.addEventListener('scroll', headerBGOpacity)
+        return () =>
+            window.removeEventListener('scroll', headerBGOpacity);
+        }, 
+        []);
+
     return (
-        <header>
+        <header style={headerBG}>
             <div className='header_wrapper'>
                 <div className='menu'>
                     <CSSTransition
@@ -41,7 +59,7 @@ export default function Header(){
                     unmountOnExit
                     >
                         <div className='header_menu_button' onClick={hideShowMenu}>
-                            <MenuIcon />        
+                            <MenuIcon />
                         </div>
                     </CSSTransition>
                 </div>

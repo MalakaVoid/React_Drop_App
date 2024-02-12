@@ -14,6 +14,68 @@ import MenuIcon from '../../../assets/icons/MenuIcon';
 import {CSSTransition } from 'react-transition-group';
 import { useRef } from 'react';
 
+const categories = [
+    {
+        name: 'смотреть все',
+        link: '/'
+    },
+    {
+        name: 'платья',
+        link: '/'
+    },
+    {
+        name: 'Повседневные платья',
+        link: '/'
+    },
+    {
+        name: 'Вечерние платья',
+        link: '/'
+    },
+    {
+        name: 'Вязаные теплые платья',
+        link: '/'
+    },
+    {
+        name: 'юбки',
+        link: '/',
+    },
+    {
+        name: 'брюки',
+        link: '/',
+    },
+    {
+        name: 'блузки и рубашки',
+        link: '/',
+    },
+    {
+        name: 'свитера и кардиганы',
+        link: '/',
+    },
+    {
+        name: 'толстовки и свитшоты',
+        link: '/',
+    },
+    {
+        name: 'свитера и джемперы',
+        link: '/',
+    },
+    {
+        name: 'жилеты',
+        link: '/',
+    },
+    {
+        name: 'верхняя одежда',
+        link: '/',
+    },
+    {
+        name: 'костюмы',
+        link: '/',
+    },
+    {
+        name: 'Спорт костюмы',
+        link: '/'
+    },
+]
 
 export default function MenuPanel({active, hideMenu}){
     const transitionRef = useRef(null);
@@ -27,22 +89,27 @@ export default function MenuPanel({active, hideMenu}){
             unmountOnExit
         >
         <div className='menu-root' >
-            <div className='close-container'>
+            <div className='menu_header_container'>
                 <div className='close-btn' onClick={hideMenu}><CloseIcon /></div>
+                <div className='menu_nav_bar_wrapper'>
+                    <div className='menu_search_button'>
+                        <SearchIcon color='white' />
+                    </div>
+                    <div className='menu_favourite_button'>
+                        <HeartIcon color='white' />
+                    </div>
+                    <a href='/account'>
+                        <div className='menu_user_button'>
+                            <UserIcon color='white' />
+                        </div>
+                    </a>
+                </div>
             </div>
             <div className='menu-content'>
                 <div className='clothes-block'>
-                    <div><a href='/' >Смотреть все</a></div>
-                    <div><a href='/' >ПЛАТЬЯ</a></div>
-                    <div><a href='/' >КОСТЮМЫ</a></div>
-                    <div><a href='/' >ЮБКИ</a></div>
-                    <div><a href='/' >БРЮКИ</a></div>
-                    <div><a href='/' >БЛУЗКИ И РУБАШКИ</a></div>
-                    <div><a href='/' >СВИТЕРА И КАРДИГАНЫ</a></div>
-                    <div><a href='/' >ТОЛСТОВКИ И СВИТШОТЫ</a></div>
-                    <div><a href='/' >СВИТЕРА И ДЖЕМПЕРЫ</a></div>
-                    <div><a href='/' >ЖИЛЕТЫ</a></div>
-                    <div><a href='/' >ВЕРХНЯЯ ОДЕЖДА</a></div>
+                    {categories.map((item, index)=>{
+                        return <div key={index}><a href={item.link}>{item.name}</a></div>
+                    })}
                 </div>
                 <div className='delivery-block'>
                     <div><a href='/' >ДОСТАВКА И ОПЛАТА</a></div>
@@ -67,20 +134,6 @@ export default function MenuPanel({active, hideMenu}){
                         <TikTokLogo />
                     </a>
                 </div>
-                <div className='menu_nav_bar_blank'></div>
-            </div>
-            <div className='menu_nav_bar_wrapper'>
-                <div className='menu_search_button'>
-                    <SearchIcon color='white' />
-                </div>
-                <div className='menu_favourite_button'>
-                    <HeartIcon color='white' />
-                </div>
-                <a href='/account'>
-                    <div className='menu_user_button'>
-                        <UserIcon color='white' />
-                    </div>
-                </a>
             </div>
         </div>
         </CSSTransition>

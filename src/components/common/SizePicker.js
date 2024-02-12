@@ -10,9 +10,9 @@ export default function SizePicker({sizes, product_id}){
     return(
         <div className='custom_size_picker'>
             <span>КУПИТЬ</span>
-            {sizes.map((size_text)=>{
+            {sizes.map((size_text, index)=>{
                 return (
-                    <div onClick={()=>addToCart(size_text)} className='custom_size_picker_element'>
+                    <div key={index} onClick={()=>addToCart(size_text)} className='custom_size_picker_element'>
                         {size_text}
                     </div>
                 );

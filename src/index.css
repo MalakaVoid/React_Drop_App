@@ -50,5 +50,15 @@ code {
 
 body.no_scroll{
   overflow-y: hidden;
-
+}
+body{
+  overflow-x: hidden;
+}
+@media screen and (min-width: 1025px){
+  body.no_scroll header{
+    padding-right: 16px;
+  }
+  body.no_scroll{
+    padding-right: 16px;
+  }
 }

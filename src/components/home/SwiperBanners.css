@@ -1,6 +1,5 @@
 @media (min-width: 1025px){
   .custom_bunner_swiper{
-      width: 100%;
       height: 100vh;
   }
   .custom_bunner_swiper .swiper-pagination-bullet {
@@ -10,7 +9,6 @@
 }
 @media (max-width: 1024px){
   .custom_bunner_swiper{
-      width: 100%;
       height: 70vh;
   }
   .custom_bunner_swiper .swiper-pagination-bullet {
@@ -20,7 +18,6 @@
 }
 @media (max-width: 650px){
   .custom_bunner_swiper{
-      width: 100%;
       height: 70vh;
   }
   .custom_bunner_swiper .swiper-pagination-bullet {
@@ -29,6 +26,8 @@
   }
 }
   .custom_bunner_swiper {
+    width: 100vw;
+    max-width: 1920px;
     min-height: 400px;
     max-height: 1000px;
   }

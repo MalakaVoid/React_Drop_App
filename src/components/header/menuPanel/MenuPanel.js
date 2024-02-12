@@ -92,16 +92,14 @@ export default function MenuPanel({active, hideMenu}){
             <div className='menu_header_container'>
                 <div className='close-btn' onClick={hideMenu}><CloseIcon /></div>
                 <div className='menu_nav_bar_wrapper'>
-                    <div className='menu_search_button'>
+                    <a className='menu_search_button'>
                         <SearchIcon color='white' />
-                    </div>
-                    <div className='menu_favourite_button'>
+                    </a>
+                    <a className='menu_favourite_button'>
                         <HeartIcon color='white' />
-                    </div>
-                    <a href='/account'>
-                        <div className='menu_user_button'>
-                            <UserIcon color='white' />
-                        </div>
+                    </a>
+                    <a href='/login' className='menu_user_button'>
+                        <UserIcon color='white' />
                     </a>
                 </div>
             </div>

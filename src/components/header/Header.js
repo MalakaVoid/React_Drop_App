@@ -67,20 +67,18 @@ export default function Header(){
                     Shop ?
                 </div>
                 <div className='header_nav_items'>
-                    <div className='header_search_button'>
+                    <a className='header_search_button'>
                         <SearchIcon />
-                    </div>
-                    <div className='header_favourite_button'>
-                        <HeartIcon />
-                    </div>
-                    <a href='/account'>
-                        <div className='header_user_button'>
-                            <UserIcon />
-                        </div>
                     </a>
-                    <div className='header_cart_button'>
+                    <a className='header_favourite_button'>
+                        <HeartIcon />
+                    </a>
+                    <a className='header_user_button' href='/login'>
+                        <UserIcon />
+                    </a>
+                    <a className='header_cart_button'>
                         <CartIcon />
-                    </div>
+                    </a>
                 </div>
             </div>
             <BgExitBlock active={isMenuOpen} hideMenu={hideShowMenu}/>

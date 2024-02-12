@@ -1,0 +1,12 @@
+.register_form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.register_form_button_wrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-top: 10px;
+}

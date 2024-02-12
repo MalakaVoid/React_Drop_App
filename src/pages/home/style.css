@@ -11,9 +11,6 @@
 @media (max-width: 650px){
 
 }
-body{
-    overflow-x: hidden;
-}
 .banners{
     /* margin-top: 70px; */
     position: relative;

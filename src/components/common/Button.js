@@ -7,6 +7,7 @@ const button_config = {
     HSMALL: 'py-1',
     TSMALL: 'text-desctop-sup',
     TMEDIUM: 'text-desctop-main',
+    TBIG: 'text-desctop-title',
 
 }
 

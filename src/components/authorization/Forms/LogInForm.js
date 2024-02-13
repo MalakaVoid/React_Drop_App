@@ -1,6 +1,7 @@
 import Button from "../../common/Button";
 import Input from "../../common/Input";
 import './LogInForm.css';
+import button_style from "../../ui/ButtonStyle";
 
 export default function LogInForm() {
     return(
@@ -8,9 +9,7 @@ export default function LogInForm() {
             <div><Input type='text' placeholder='E-Mail или номер телефона'/></div>
             <div><Input type='password' placeholder='Пароль'/></div>
             <div className="login_form_button_wrapper">
-                <Button type='submit' config={{wSize: 'WSELF',text_size: 'TMEDIUM',hSize: 'HSMALL'}}>
-                    ВОЙТИ
-                </Button>
+            <button className={button_style}>ВОЙТИ</button>
             </div>
         </form>
     )

@@ -1,13 +1,52 @@
+@media (min-width: 1025px){
+    .authorization{
+        justify-content: flex-end;
+    }
+    .login_bg_image_wrapper{
+        width: 50%;
+    }
+    .log_content_wrapper{
+        width: 50%;
+        margin-top: 25vh;
+
+    }
+}
+@media (max-width: 1024px){
+    .login_bg_image_wrapper{
+        width: 100%;
+    }
+    .log_content_wrapper{
+        width: 100%;
+        margin-top: 25vh;
+
+    }
+    .log_content{
+        padding: 30px;
+    }
+}
+@media (max-width: 650px){
+    .login_bg_image_wrapper{
+        width: 100%;
+        display: none;
+    }
+    .log_content_wrapper{
+        width: 100%;
+        margin-top: 0;
+    }
+    .log_content{
+        padding: 30px;
+    }
+}
 .authorization{
-    display: block;
+    display: flex;
 
 
     width: 100%;
     height: 100vh;
 
+    margin-top: 0;
 }
 .login_bg_image_wrapper{
-    width: 50%;
     height: 100%;
 
     position: absolute;
@@ -18,6 +57,7 @@
     overflow: hidden;
 
     background-color: black;
+    z-index: -10;
 }
 .login_bg_image{
     min-height: 100%;
@@ -28,12 +68,8 @@
     opacity: 0.5;
 }
 .log_content_wrapper{
-    width: 50%;
-    height: 100%;
     /* margin-left: auto; */
-    float: right;
 
-    display: flex;
 }
 .log_content{
     display: flex;
@@ -44,8 +80,10 @@
     width: 100%;
 
     margin: 0 auto;
+    background-color: white;
 
-    margin-top: 25vh;
+
+    /* margin-top: 25vh; */
 }
 .login_logo{
     display: block;
@@ -89,4 +127,18 @@
 .sign_in_link.active::after{
     transform: scaleY(3);
     transition: transform 0.1s;
+}
+.reg_button{
+    display: inline;
+    
+    padding: 0 20px;
+
+    border: solid var(--main-black) 1px;
+
+    background: none;
+
+    transition: ease-in-out 250ms;
+}
+.reg_button:hover{
+
 }

@@ -1,6 +1,14 @@
 import { useState } from 'react';
 import './SizePicker.css';
 
+/* 
+    SIZE PICKER ON DESCTOP "BUY" BUTTON
+    @
+    sizes: [],
+    product_id: int
+*/
+
+
 export default function SizePicker({sizes, product_id}){
     const addToCart = function(size) {
         console.log(size);

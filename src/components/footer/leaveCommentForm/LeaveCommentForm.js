@@ -1,6 +1,7 @@
 import './LeaveCommentForm.css';
 import Button from '../../common/Button';
 import Input from '../../common/Input';
+import { footer_button_style } from '../../ui/ButtonStyle';
 
 export default function LeaveCommentFrom(){
     return(
@@ -8,7 +9,7 @@ export default function LeaveCommentFrom(){
             <h3>ОСТАВЬТЕ ОТЗЫВ</h3>
             <div className='input-container'><Input placeholder='E-Mail' type='email' /></div>
             <div className='input-container'><Input placeholder='Отзыв' type='text' /></div>
-            <div className='sub_btn-container'><Button type='submit' config={{wSize: 'SELF', hSize: 'HBIG'}}>ОТПРАВИТЬ</Button></div>
+            <div className='sub_btn-container'><button className={footer_button_style}>ОТПРАВИТЬ</button></div>
         </form>
     )
 }

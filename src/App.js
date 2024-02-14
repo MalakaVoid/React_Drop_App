@@ -4,6 +4,7 @@ import Home from './pages/home/Home.js';
 import Product from "./pages/Product/Product.js";
 import Account from "./pages/account/Accont.js";
 import Authorization from "./pages/authorization/Authorization.js";
+import Catalogue from "./pages/catalog/Catalogue.js";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/account" element={<Account />} />
           <Route path="/login" element={<Authorization />} />
+          <Route path="/catalogue" element={<Catalogue />} />
         </Routes>
       </main>
     </BrowserRouter>

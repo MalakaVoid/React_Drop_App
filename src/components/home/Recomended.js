@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/free-mode';
-import ProductCard from '../common/ProductCard';
+import ProductCardRecomendation from '../common/ProductCardRecomendation';
 
 
 
@@ -31,7 +31,7 @@ export default function Recomended({title, recomended_items}) {
             className="cards_swiper"
             >
             {recomended_items.map((recomended_item)=>{
-                return (<SwiperSlide key={recomended_item.id} className='cards_swiper_slide'><ProductCard product_info={recomended_item}/></SwiperSlide>)
+                return (<SwiperSlide key={recomended_item.id} className='cards_swiper_slide'><ProductCardRecomendation product_info={recomended_item}/></SwiperSlide>)
             })}
             </Swiper>
             </div>

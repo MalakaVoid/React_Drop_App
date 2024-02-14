@@ -10,7 +10,7 @@ export default function Footer(){
                 <div className='link-blocks'>
                     <div className='catalogue'>
                         <h3>КАТАЛОГ</h3>
-                        <div><a href='/'>Одежда</a></div>
+                        <div><a href='/catalogue'>Одежда</a></div>
                         <div><a href='/'>Повседневные Платья</a></div>
                         <div><a href='/'>Вечерние Платья</a></div>
                         <div><a href='/'>Костюмы/Комплекты</a></div>

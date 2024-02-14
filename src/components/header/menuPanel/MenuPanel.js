@@ -17,7 +17,7 @@ import { useRef } from 'react';
 const categories = [
     {
         name: 'смотреть все',
-        link: '/'
+        link: '/catalogue'
     },
     {
         name: 'платья',

@@ -1,7 +1,7 @@
 import Button from "../../common/Button";
 import Input from "../../common/Input";
 import './RegisterForm.css';
-import button_style from "../../ui/ButtonStyle";
+import {auth_button_style} from "../../ui/ButtonStyle";
 
 export default function RegisterForm() {
     return(
@@ -12,7 +12,7 @@ export default function RegisterForm() {
             <div><Input type='password' placeholder='Пароль'/></div>
             <div><Input type='password' placeholder='Подтверждение пароля'/></div>
             <div className="register_form_button_wrapper">
-            <button className={button_style}>РЕГИСТРАЦИЯ</button>
+            <button className={auth_button_style}>РЕГИСТРАЦИЯ</button>
             </div>
         </form>
     )

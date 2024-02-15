@@ -6,8 +6,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import './ProductImageSwiper.css';
+import ArrowIcon from '../../assets/icons/ArrowIcon';
 
-export default function ProductImageSwiper({images}) {
+export default function ProductImageSwiper({product}) {
     const navigationPrevRef = useRef(null);
     const navigationNextRef = useRef(null);
 
@@ -26,11 +27,11 @@ export default function ProductImageSwiper({images}) {
             modules={[Navigation]}
             className="product_card_image_swiper"
         >
-            {images.map((item, index)=>{
-                return <SwiperSlide><img src={item} /></SwiperSlide>
+            {product.img.map((item, index)=>{
+                return <SwiperSlide><a href='/'><img src={item} /></a></SwiperSlide>
             })}
-            <div ref={navigationPrevRef} className='previous' />
-            <div ref={navigationNextRef} className='next' />
+            <div ref={navigationPrevRef} className='product_card_image_swiper_previous'><ArrowIcon /></div>
+            <div ref={navigationNextRef} className='product_card_image_swiper_next'><ArrowIcon /></div>
         </Swiper>
         </>
     );

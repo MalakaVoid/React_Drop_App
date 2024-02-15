@@ -1,3 +1,26 @@
-main{
-    margin-top: 70px;
+@media (min-width: 1025px) {
+    main{
+        margin-top: 70px;
+    }
+    .catalogue .catalogue_products{
+        margin-bottom: 60px;
+    }
+}
+@media (max-width: 1024px) {
+    main{
+        margin-top: 70px;
+    }
+    .catalogue .catalogue_products{
+        margin-bottom: 30px;
+    }
+    
+}
+@media (max-width: 650px) {
+    main{
+        margin-top: 55px;
+    }
+    .catalogue .catalogue_products{
+        margin-bottom: 30px;
+    }
+    
 }

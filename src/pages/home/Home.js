@@ -75,10 +75,10 @@ export default function Home() {
         <CategoriesBlocks />
       </section>
       <section className='recomended_section'>
-        <Recomended recomended_items={recomended_items} title='Вечерние платья'/>
+        <Recomended recomended_products={recomended_items} title='Вечерние платья'/>
       </section>
       <section className='recomended_section'>
-        <Recomended recomended_items={recomended_items} title='Верхняя одежда'/>
+        <Recomended recomended_products={recomended_items} title='Верхняя одежда'/>
       </section>
       <Footer />
     </>

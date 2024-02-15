@@ -31,7 +31,7 @@
         margin: 0 auto;
         justify-content: center;
         gap: 10px;
-        grid-template-columns: repeat(auto-fit, minmax(235px, 235px));
+        grid-template-columns: repeat(auto-fit, minmax(275px, 275px));
     }
     .catalogue_products_nav{
         display: inline-flex;
@@ -59,11 +59,19 @@
         display: none;
     }
     .catalogue_products_title{
-        justify-content: none;
+        justify-content: center;
     }
     .catalogue_products_filters{
         width: 25px;
         height: 25px;
+    }
+    .catalogue_products_filters_wrapper{
+        position: absolute;
+        right: 0;
+    }
+    .catalogue_products_title_bar{
+        justify-content: center;
+        position: relative;
     }
 }
 .catalogue_products{

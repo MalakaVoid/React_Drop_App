@@ -95,7 +95,7 @@ header{
     box-sizing: border-box;
 
     /* background-color: white; */
-    z-index: 100;
+    z-index: 30;
 }
 header .header_wrapper{
     width: inherit;

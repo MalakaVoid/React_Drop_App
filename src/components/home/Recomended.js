@@ -12,7 +12,7 @@ import ProductCardRecomendation from '../common/ProductCardRecomendation';
 
 
 
-export default function Recomended({title, recomended_items}) {
+export default function Recomended({title, recomended_products}) {
     return(
         <div className="recomended">
             <div className='recomended_head'>
@@ -30,7 +30,7 @@ export default function Recomended({title, recomended_items}) {
             modules={[FreeMode]}
             className="cards_swiper"
             >
-            {recomended_items.map((recomended_item)=>{
+            {recomended_products.map((recomended_item)=>{
                 return (<SwiperSlide key={recomended_item.id} className='cards_swiper_slide'><ProductCardRecomendation product_info={recomended_item}/></SwiperSlide>)
             })}
             </Swiper>

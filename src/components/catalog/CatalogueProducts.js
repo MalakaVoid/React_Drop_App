@@ -22,7 +22,7 @@ export default function CatalogueProducts({products}) {
             </div>
             <div className='catalogue_products_wrapper'>
                 {products.map((item, index)=>{
-                    return <ProductCard product_info={item}/>
+                    return <ProductCard key={index} product_info={item}/>
                 })}
             </div>
         </section>

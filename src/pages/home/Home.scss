@@ -1,0 +1,19 @@
+@media (min-width: 1025px){
+    .recomended_section{
+        @apply mt-[40px];
+    }
+}
+@media (max-width: 1024px){
+    .recomended_section{
+        @apply mt-[20px];
+    }
+}
+.banners_section{
+    @apply relative block w-full overflow-x-hidden;
+}
+.home_categoroes_section{
+    @apply w-full;
+}
+.recomended_section{
+    @apply w-full box-border;
+}

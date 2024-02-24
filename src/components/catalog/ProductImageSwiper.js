@@ -28,7 +28,7 @@ export default function ProductImageSwiper({product}) {
             className="product_card_image_swiper"
         >
             {product.img.map((item, index)=>{
-                return <SwiperSlide><a href='/'><img src={item} /></a></SwiperSlide>
+                return <SwiperSlide key={index}><a href='/'><img src={item} /></a></SwiperSlide>
             })}
             <div ref={navigationPrevRef} className='product_card_image_swiper_previous'><ArrowIcon /></div>
             <div ref={navigationNextRef} className='product_card_image_swiper_next'><ArrowIcon /></div>

@@ -13,6 +13,7 @@ import MenuIcon from '../../../assets/icons/MenuIcon';
 // REACT
 import {CSSTransition } from 'react-transition-group';
 import { useRef } from 'react';
+import use100vh from '../../../hooks/use100vh';
 
 const categories = [
     {
@@ -79,6 +80,7 @@ const categories = [
 
 export default function MenuPanel({active, hideMenu}){
     const transitionRef = useRef(null);
+    const ref100vhFixer = use100vh();
     return (
         <CSSTransition 
             ref={transitionRef}
@@ -88,7 +90,7 @@ export default function MenuPanel({active, hideMenu}){
             mountOnEnter
             unmountOnExit
         >
-        <div className='menu-root' >
+        <div className='menu-root' ref={ref100vhFixer}>
             <div className='menu_header_container'>
                 <div className='close-btn' onClick={hideMenu}><CloseIcon /></div>
                 <div className='menu_nav_bar_wrapper'>

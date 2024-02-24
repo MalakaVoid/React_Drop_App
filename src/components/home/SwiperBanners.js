@@ -6,13 +6,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import './SwiperBanners.css';
+import './SwiperBanners.scss';
 
-// IMAGES
-import banner1 from '../../assets/Banner.jpg';
-import banner2 from '../../assets/banner2.jpg';
-import bannerMob from '../../assets/BannerMob.jpg';
-import arrowIcon from '../../assets/icons/arrow-icon.svg';
+import { slidesMobile, slidesDesctop } from '../../assets/TEST_DATA/BannersHome';
 
 // import required modules
 import { Pagination } from 'swiper/modules';
@@ -20,20 +16,6 @@ import useWindowWidth from '../../hooks/useWindowWidth';
 
 export default function SwiperBanners() {
   const windowWidth = useWindowWidth();
-
-    const slidesDesctop = [
-        {img: banner1},
-        {img: banner2},
-        {img: banner1},
-        {img: banner2},
-    ]
-    const slidesMobile = [
-        {img: bannerMob},
-        {img: banner2},
-        {img: banner1},
-        {img: banner2},
-    ]
-
     const getBanners = ()=>{
       if (windowWidth < 650){ 
         return slidesMobile;

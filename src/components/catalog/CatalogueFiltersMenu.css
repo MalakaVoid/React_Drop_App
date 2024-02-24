@@ -1,5 +1,41 @@
 /* REDO CATALOGUE PRODUCT FILTERS ICON */
 
+@media (min-width: 1024px){
+    .catalogue_products_filters_menu{
+        max-width: 350px;
+
+    }
+    .catalogue_products_filters_menu_title_bar{
+        height: 70px;
+    }
+    .catalogue_products_filters_menu_main{
+        height: calc(100% - 70px);
+    }
+}
+@media (max-width: 1024px){
+    .catalogue_products_filters_menu{
+        max-width: 350px;
+    }
+    .catalogue_products_filters_menu_title_bar{
+        height: 70px;
+    }
+    .catalogue_products_filters_menu_main{
+        height: calc(100% - 70px);
+    }
+}
+@media (max-width: 650px){
+    .catalogue_products_filters_menu{
+        left: 0;
+        max-width: none;
+    }
+    .catalogue_products_filters_menu_title_bar{
+        height: 55px;
+    }
+    .catalogue_products_filters_menu_main{
+        height: calc(100% - 55px);
+    }
+}
+
 .catalogue_products_filters_menu{
     position: fixed;
 
@@ -7,14 +43,16 @@
     right: 0;
     bottom: 0;
 
-    width: 350px;
+    width: 100%;
 
     background-color: var(--white-main);
+
+    /* height: 100vh; */
 
     z-index: 35;
 
     box-sizing: border-box;
-    padding: 0 10px;
+    padding-bottom: 10px;
 }
 
 .catalogue_products_filters_menu_title_bar{
@@ -22,17 +60,29 @@
     justify-content: center;
     align-items: center;
 
+    position: relative;
+
     width: 100%;
 
     position: relative;
 
-    height: 70px;
-
-    border-bottom: solid 1px var(--main-black);
+    /* border-bottom: solid 1px var(--main-black); */
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.catalogue_products_filters_menu_title_bar::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 20px);
+    height: 1px;
+    background-color: var(--main-black);
 }
 
 .catalogue_products_filters_menu_title{
-    font-size: 28px;
+    font-size: var(--text-title);
 
     font-weight: 600;
 
@@ -42,7 +92,7 @@
 }
 .catalogue_products_filters_menu_close{
     position: absolute;
-    right: 0;
+    right: 10px;
 
     width: 25px;
     height: 25px;
@@ -58,7 +108,13 @@
     display: flex;
     flex-direction: column;
 
+    overflow-y: auto;
+
     width: 100%;
+    
+    padding: 0 10px;
+    box-sizing: border-box;
+
 }
 .catalogue_products_filters_menu_main_title{
     font-size: var(--text-main);
@@ -123,6 +179,8 @@
     min-height: 50px;
 }
 .catalogue_products_filters_menu_button_wrapper{
+    /* margin-top: 20px; */
+    margin-top: auto;
     width: 100%;
     position: relative;
     bottom: 0;

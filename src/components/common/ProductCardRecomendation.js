@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Button from './Button';
-import './ProductCardRecomendation.css';
+import './ProductCardRecomendation.scss';
 import SizePicker from './SizePicker';
 import useWindowWidth from '../../hooks/useWindowWidth';
 import HeartIcon from '../../assets/icons/HeartIcon';
@@ -27,9 +27,9 @@ export default function ProductCardRecomendation({product_info}){
                     <img src={product_info.img}/>
                 </div>
                 <h3 className='product_card_recomendation_title'>{product_info.title}</h3>
-                <div className='product_card_recomendation_buttons_wrapper'>
-                    <a className='product_card_recomendation_price_button'>{product_info.price} ₽</a>
-                    <a className='product_card_recomendation_favorite_button'><HeartIcon /></a>
+                <div className='product_card_recomendation_buttons'>
+                    <a className='product_card_recomendation_buttons_price'>{product_info.price} ₽</a>
+                    <a className='product_card_recomendation_buttons_favorite'><HeartIcon /></a>
                 </div>
             </div>
         )

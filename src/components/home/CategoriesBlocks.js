@@ -1,4 +1,4 @@
-import './CategoriesBlocks.css';
+import './CategoriesBlocks.scss';
 import blueDress from '../../assets/categories/blue_dress.jfif';
 import redDress from '../../assets/categories/red_dress.jfif';
 import costume from '../../assets/categories/costume.jfif';
@@ -47,7 +47,7 @@ export default function CategoriesBlocks() {
             loop={true}
             slidesPerView={'auto'}
             spaceBetween={0}
-            className="categories_wrapper"
+            className="home_categories"
             autoplay={{
                 delay: 3500,
                 disableOnInteraction: false,
@@ -56,7 +56,7 @@ export default function CategoriesBlocks() {
             >
                 {categories_data.map((category, index)=>{
                     return (
-                        <SwiperSlide key={index}><a className='categories_wrapper_link' style={{backgroundImage: `url(${category.img})`}}>
+                        <SwiperSlide key={index}><a className='home_categories_link' style={{backgroundImage: `url(${category.img})`}}>
                             <span>{category.text}</span>
                         </a></SwiperSlide>
                     )
@@ -66,10 +66,10 @@ export default function CategoriesBlocks() {
     }
     else{
         return (
-            <div className="categories_wrapper" >
+            <div className="home_categories" >
                 {categories_data.map((category, index)=>{
                     return (
-                        <a key={index} className='categories_wrapper_link' style={{backgroundImage: `url(${category.img})`}}>
+                        <a key={index} className='home_categories_link' style={{backgroundImage: `url(${category.img})`}}>
                             <span>{category.text}</span>
                         </a>
                     )

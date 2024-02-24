@@ -1,0 +1,78 @@
+@media (min-width: 1025px){
+    .recomended{
+        &_head_more{
+            @apply bottom-0;
+        }
+
+        &_cards_swiper {
+            @apply h-[760px];
+
+            &_slide{
+                @apply w-[453.25px];
+            }
+        }
+    }
+}
+@media (max-width: 1024px){
+    .recomended{
+        &_head_more{
+            @apply bottom-0;
+        }
+
+        &_cards_swiper {
+            @apply h-[390px];
+
+            &_slide{
+                @apply w-[235px];
+            }
+        }
+    }
+}
+@media (max-width: 650px){
+    .recomended{
+        &_head_more{
+            @apply bottom-[50%] translate-y-1/2;
+
+
+            &_text{
+                @apply hidden;
+            }
+        }
+
+        &_cards_swiper {
+            @apply h-max;
+
+            &_slide{
+                width: calc(50vw - 15px);
+                @apply max-w-[235px];
+            }
+        }
+    }
+}
+
+.recomended{
+    @apply flex-col w-full;
+
+    &_head{
+        @apply flex justify-center w-full box-border relative px-[var(--side_paddings)];
+
+        &_title{
+            @apply text-[length:var(--text-title)] font-bold uppercase text-nowrap;
+        }
+        &_more{
+            @apply absolute text-[length:var(--text-main)] font-semibold text-nowrap right-[var(--side-paddings)];
+
+            &:hover{
+                @apply underline cursor-pointer;
+            }
+        }
+    }
+
+    &_cards_swiper{
+        @apply mt-[20px] box-border w-full px-[var(--side-paddings)];
+
+        &_slide{
+            @apply flex;
+        }
+    }
+}

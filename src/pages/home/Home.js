@@ -11,7 +11,7 @@ import Footer from '../../components/footer/Footer.js';
 import CategoriesBlocks from '../../components/home/CategoriesBlocks.js';
 import Recomended from '../../components/home/Recomended.js';
 // CSS
-import './style.css';
+import './Home.scss';
 
 const recomended_items = [
   {
@@ -68,10 +68,10 @@ export default function Home() {
   return (
     <>
       <Header />
-      <section className="banners">
+      <section className="banners_section">
         <SwiperBanners />
       </section>
-      <section className='home_categoroes'>
+      <section className='home_categoroes_section'>
         <CategoriesBlocks />
       </section>
       <section className='recomended_section'>

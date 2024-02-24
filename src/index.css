@@ -18,6 +18,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 :root{
   --main-black: #131313;
   --sup-black: #808080;
@@ -28,9 +29,13 @@ code {
 
 @media (min-width: 1025px){
   :root{
+    /* TEXT */
     --text-title: 32px;
     --text-main: 20px;
     --text-mini: 16px;
+    /* MARGINS */
+    --header-height: 70px;
+    --side-paddings: 30px;
   }
 }
 @media (max-width: 1024px){
@@ -38,6 +43,10 @@ code {
     --text-title: 28px;
     --text-main: 20px;
     --text-mini: 16px;
+    /* MARGINS */
+    --header-height: 70px;
+
+    --side-paddings: 20px;
   }
 }
 @media (max-width: 650px){
@@ -45,6 +54,9 @@ code {
     --text-title: 20px;
     --text-main: 16px;
     --text-mini: 16px;
+    /* MARGINS */
+    --header-height: 55px;
+    --side-paddings: 10px;
   }
 }
 
@@ -54,6 +66,7 @@ body.no_scroll{
 body{
   overflow-x: hidden;
 }
+
 @media screen and (min-width: 1025px){
   body.no_scroll header{
     padding-right: 16px;

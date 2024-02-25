@@ -1,6 +1,6 @@
 import FiltersIcon from '../../assets/icons/FiltersIcon';
 import CatalogueFiltersMenu from './CatalogueFiltersMenu';
-import './CatalogueProducts.css';
+import './CatalogueProducts.scss';
 
 import ProductCard from './ProductCard';
 

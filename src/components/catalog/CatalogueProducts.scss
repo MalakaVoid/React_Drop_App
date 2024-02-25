@@ -1,0 +1,103 @@
+@media (min-width: 1025px) {
+    .catalogue_products{
+        @apply pt-[20px];
+
+        &_wrapper{
+            @apply grid w-full mx-auto justify-center gap-[10px];
+            grid-template-columns: repeat(auto-fit, minmax(453px, 453px));
+        }
+
+        &_nav{
+            @apply inline-flex;
+        }
+
+        &_title{
+            @apply justify-center;
+        }
+
+        &_filters{
+            @apply size-[30px];
+        }
+    }
+}
+@media (max-width: 1024px) and (min-width: 651px) {
+    .catalogue_products{
+        @apply pt-[20px];
+
+        &_wrapper{
+            @apply grid w-full mx-auto justify-center gap-[10px];
+            grid-template-columns: repeat(auto-fit, minmax(275px, 275px));
+        }
+
+        &_nav{
+            @apply inline-flex;
+        }
+
+        &_title{
+            @apply justify-center;
+        }
+
+        &_filters{
+            @apply size-[30px];
+        }
+    }
+}
+@media (max-width: 650px) {
+    .catalogue_products{
+        @apply pt-[10px];
+
+        &_wrapper{
+            @apply flex gap-[10px] flex-wrap;
+        }
+
+        &_nav{
+            @apply hidden;
+        }
+
+        &_title{
+            @apply justify-center;
+
+            &_bar{
+                @apply justify-center relative;
+            }
+        }
+
+        &_filters{
+            @apply size-[25px];
+
+            &_wrapper{
+                @apply absolute right-0;
+            }
+        }
+    }
+}
+.catalogue_products{
+    @apply flex flex-col px-[var(--side-paddings)];
+
+    &_title_bar{
+        @apply flex mb-[20px];
+    }
+
+    &_nav{
+        @apply flex-1 text-[length:var(--text-mini)] text-[var(--sup-black)];
+
+        a:hover{
+            @apply underline;
+        }
+        a.active{
+            @apply text-[var(--main-black)] font-medium;
+        }
+    }
+
+    &_title{
+        @apply flex-[2] flex items-center text-[length:var(--text-title)] font-bold uppercase;
+    }
+
+    &_filters_wrapper{
+        @apply flex-1 flex justify-end items-center;
+    }
+
+    &_filters{
+        @apply rotate-90;
+    }
+}

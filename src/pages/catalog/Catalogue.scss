@@ -1,0 +1,25 @@
+@media (min-width: 1025px) {
+    .catalogue{
+        &_products{
+            @apply mt-[60px];
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .catalogue{
+        &_products{
+            @apply mt-[30px];
+        }
+    }
+}
+@media (max-width: 650px) {
+    .catalogue{
+        &_products{
+            @apply mt-[30px];
+        }
+    }
+}
+
+.catalogue{
+    @apply mt-[var(--header-height)];
+}

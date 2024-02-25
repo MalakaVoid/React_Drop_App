@@ -1,0 +1,23 @@
+.custom_size_picker{
+    @apply flex justify-center items-center box-border
+    border-solid border border-[var(--main-black)] 
+    cursor-pointer py-[5px] px-[10px] gap-[5px] text-[20px];
+
+    &:hover &_element{
+        @apply flex;
+    }
+    
+    &:hover span{
+        @apply hidden;
+    }
+
+    &_element{
+        @apply w-[40px] h-[30px] justify-center items-center
+        border border-solid border-[var(--main-black)]
+        text-[16px] hidden;
+
+        &:hover{
+            @apply bg-[var(--main-black)] text-[var(--white-main)] duration-[0.25s];
+        }
+    }
+}

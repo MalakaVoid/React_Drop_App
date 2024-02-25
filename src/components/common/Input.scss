@@ -1,0 +1,16 @@
+.custom_input_container{
+    @apply relative;
+
+    input{
+        @apply w-full text-[16px] leading-[32px] bg-transparent px-[5px] relative outline-none;
+
+        &:focus,
+        &:valid{
+            @apply outline-none;
+        }
+    }
+
+    &::after{
+        @apply content-[""] w-full bottom-[-2px] block h-[1px] left-0 absolute bg-[var(--main-black)];
+    }
+}

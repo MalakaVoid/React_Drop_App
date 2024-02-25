@@ -1,5 +1,5 @@
 // CSS
-import './Header.css';
+import './Header.scss';
 // Images
 import CartIcon from '../../assets/icons/CartIcon';
 import UserIcon from '../../assets/icons/UserIcon';
@@ -47,7 +47,7 @@ export default function Header(){
         []);
 
     return (
-        <header style={headerBG}>
+        <header className='header' style={headerBG}>
             <div className='header_wrapper'>
                 <div className='menu'>
                     <CSSTransition

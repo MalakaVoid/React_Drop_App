@@ -1,5 +1,5 @@
 // CSS
-import './MenuPanel.css';
+import './MenuPanel.scss';
 // ICONS
 import CloseIcon from '../../../assets/icons/CloseIcon';
 import YoutubeLogo from '../../../assets/socialMediaLogos/YoutubeLogo';
@@ -86,51 +86,51 @@ export default function MenuPanel({active, hideMenu}){
             ref={transitionRef}
             in={active}
             timeout={500}
-            classNames={'menu-root'}
+            classNames={'left_menu'}
             mountOnEnter
             unmountOnExit
         >
-        <div className='menu-root' ref={ref100vhFixer}>
-            <div className='menu_header_container'>
-                <div className='close-btn' onClick={hideMenu}><CloseIcon /></div>
-                <div className='menu_nav_bar_wrapper'>
-                    <a className='menu_search_button'>
+        <div className='left_menu' ref={ref100vhFixer}>
+            <div className='left_menu_head'>
+                <div className='left_menu_head_close_button' onClick={hideMenu}><CloseIcon /></div>
+                <div className='left_menu_head_nav_bar'>
+                    <a className='left_menu_search_button'>
                         <SearchIcon color='white' />
                     </a>
-                    <a className='menu_favourite_button'>
+                    <a className='left_menu_favourite_button'>
                         <HeartIcon color='white' />
                     </a>
-                    <a href='/login' className='menu_user_button'>
+                    <a href='/login' className='left_menu_user_button'>
                         <UserIcon color='white' />
                     </a>
                 </div>
             </div>
-            <div className='menu-content'>
-                <div className='clothes-block'>
+            <div className='left_menu_content'>
+                <div className='left_menu_content_clothes'>
                     {categories.map((item, index)=>{
                         return <div key={index}><a href={item.link}>{item.name}</a></div>
                     })}
                 </div>
-                <div className='delivery-block'>
+                <div className='left_menu_content_delivery'>
                     <div><a href='/' >ДОСТАВКА И ОПЛАТА</a></div>
                     <div><a href='/' >УСЛОВИЯ ВОЗВРАТА</a></div>
                 </div>
-                <div className='about-block'>
+                <div className='left_menu_content_about'>
                     <div><a href='/' >КОНТАКТЫ</a></div>
                     <div><a href='/' >О НАС</a></div>
                     <div><a href='/' >СОТРУДНИЧЕСТВО</a></div>
                 </div>
-                <div className='cm-logos'>
-                    <a href='/' className='yt-logo'>
+                <div className='left_menu_cm_logos'>
+                    <a href='/' className='yt_logo mini_icon'>
                         <YoutubeLogo />
                     </a>
-                    <a href='/' className='vk-logo'>
+                    <a href='/' className='vk_logo mini_icon'>
                         <VkLogo />
                     </a>
-                    <a href='/' className='tg-logo'>
+                    <a href='/' className='tg_logo mini_icon'>
                         <TelegramLogo />
                     </a>
-                    <a href='/' className='tk-logo'>
+                    <a href='/' className='tk_logo mini_icon'>
                         <TikTokLogo />
                     </a>
                 </div>

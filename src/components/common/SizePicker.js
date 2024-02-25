@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './SizePicker.css';
+import './SizePicker.scss';
 
 /* 
     SIZE PICKER ON DESCTOP "BUY" BUTTON

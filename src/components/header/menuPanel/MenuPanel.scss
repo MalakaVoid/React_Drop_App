@@ -1,0 +1,185 @@
+@media (min-width: 1025px){
+    .left_menu{
+        @apply w-[350px];
+
+        &_head_nav_bar{
+            @apply hidden;
+        }
+
+        &_cm_logos{
+            @apply mt-[40px];
+        }
+
+        &_search_button{
+            @apply size-[30px];
+        }
+        &_favourite_button{
+            @apply w-[34px] h-[30px];
+        }
+        &_user_button{
+            @apply w-[26px] h-[30px];
+        }
+        &_head_close_button{
+            @apply size-[27px];
+        }
+    }
+}
+@media (max-width: 1024px){
+    .left_menu{
+        @apply w-[350px];
+
+        &_head_nav_bar{
+            @apply hidden;
+        }
+
+        &_cm_logos{
+            @apply mt-[40px];
+        }
+
+        &_search_button{
+            @apply size-[30px];
+        }
+        &_favourite_button{
+            @apply w-[34px] h-[30px];
+        }
+        &_user_button{
+            @apply w-[26px] h-[30px];
+        }
+        &_head_close_button{
+            @apply size-[27px];
+        }
+    }
+}
+@media (max-width: 650px){
+    .left_menu{
+        @apply w-full;
+
+        &_head_nav_bar{
+            @apply flex;
+        }
+
+        &_cm_logos{
+            @apply mt-[20px];
+        }
+
+        &_search_button{
+            @apply size-[25px];
+        }
+        &_favourite_button{
+            @apply w-[29px] h-[25px];
+        }
+        &_user_button{
+            @apply w-[21px] h-[25px];
+        }
+        &_head_close_button{
+            @apply size-[22px];
+        }
+    }
+}
+
+.left_menu{
+    @apply fixed top-0 bottom-0 left-0
+    bg-[#1b1b1bcc] backdrop-blur-lg
+    box-border z-[10] pb-[10px] pl-[var(--side-paddings)];
+
+    &_head{
+        @apply w-full flex justify-between items-center relative h-[var(--header-height)];
+
+        &_close_button{
+            @apply cursor-pointer;
+        }
+
+        &_nav_bar{
+            @apply w-1/2 pr-[10px] justify-end gap-[20px] items-center;
+        }
+    }
+
+    &_content{
+        @apply flex-col w-full uppercase overflow-auto h-[calc(100%-var(--header-height))]
+        text-[var(--white-main)] text-[18px] leading-[24px];
+
+        a{
+            @apply relative inline-flex cursor-pointer mb-[8px];
+
+            &:hover::after{
+                @apply scale-100;
+            }
+
+            &::after{
+                @apply content-[""] w-full block h-[1px]
+                absolute left-0 bottom-[-2px] bg-[var(--white-main)]
+                duration-300 scale-0;
+            }
+        }
+
+        &_delivery{
+            @apply flex-col w-full mt-[20px];
+        }
+
+        &_clothes{
+            @apply flex-col w-full;
+        }
+
+        &_about{
+            @apply flex-col w-full mt-auto pt-[20px];
+        }
+    }
+
+    &_cm_logos{
+        @apply flex gap-[10px];
+
+        a{
+            @apply block;
+
+            &::after{
+                @apply hidden;
+            }
+        }
+
+        .mini_icon svg,
+        .mini_icon svg path{
+            @apply fill-[#585858] duration-[0.25s];
+        }
+
+        .yt_logo:hover{
+            svg,
+            svg path{
+                @apply fill-red-600;
+            }
+        }
+
+        .vk_logo:hover{
+            svg,
+            svg path{
+                @apply fill-blue-500;
+            }
+        }
+
+        .tg_logo:hover{
+            svg,
+            svg path{
+                @apply fill-blue-500;
+            }
+        }
+
+        .tk_logo:hover{
+            svg,
+            svg path{
+                @apply fill-black;
+            }
+        }
+    }
+
+    &-enter{
+        @apply -translate-x-full;
+    }
+    &-enter-active{
+        @apply translate-x-0 transition-transform duration-500;
+    }
+    &-exit{
+        @apply -translate-x-0;
+    }
+    &-exit-active{
+        @apply -translate-x-full transition-transform duration-500;
+    }
+}

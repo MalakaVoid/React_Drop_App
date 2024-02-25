@@ -1,0 +1,98 @@
+@media (min-width: 1025px){
+    .header{
+        &_user_button{
+            @apply block w-[26px] h-[30px];
+        }
+
+        &_favourite_button{
+            @apply block w-[34px] h-[30px];
+        }
+
+        &_search_button,
+        &_cart_button{
+            @apply block size-[30px];
+        }
+
+        &_menu_button{
+            @apply w-[38px] h-[23px];
+        }
+    }
+}
+@media (max-width: 1024px){
+    .header{
+        &_user_button{
+            @apply block w-[26px] h-[30px];
+        }
+
+        &_favourite_button{
+            @apply block w-[34px] h-[30px];
+        }
+
+        &_search_button,
+        &_cart_button{
+            @apply block size-[30px];
+        }
+
+        &_menu_button{
+            @apply w-[38px] h-[23px];
+        }
+    }
+}
+@media (max-width: 650px){
+    .header{
+        &_user_button,
+        &_favourite_button,
+        &_search_button{
+            @apply hidden;
+        }
+
+        &_cart_button{
+            @apply block size-[25px];
+        }
+
+        &_menu_button{
+            @apply w-[33px] h-[18px];
+        }
+    }
+}
+
+.header{
+    @apply h-[var(--header-height)] fixed top-0 left-0 w-full max-h-[80px] box-border z-[30];
+
+    &_wrapper{
+        @apply size-full relative px-[var(--side-paddings)]
+        flex justify-between items-center box-border;
+    }
+
+    &_menu_button{
+        @apply cursor-pointer;
+
+        &_ts-enter{
+            opacity: 1;
+        }
+
+        &_ts-enter-active{
+            opacity: 0;
+            transition: opacity 100ms;
+        }
+
+        &_ts-exit{
+            opacity: 1;
+        }
+
+        &_ts-exit-active{
+            opacity: 1;
+            transition: opacity 100ms;
+        }
+    }
+
+    &_logo{
+        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+        w-[300px] h-[35px] cursor-pointer
+        text-center text-[30px] leading-[35px];
+    }
+
+    &_nav_items{
+        @apply flex justify-end gap-[20px];
+    }
+}

@@ -1,0 +1,7 @@
+.register_form{
+    @apply flex flex-col gap-[20px];
+
+    &_button_wrapper{
+        @apply flex justify-end items-center mt-[10px];
+    }
+}

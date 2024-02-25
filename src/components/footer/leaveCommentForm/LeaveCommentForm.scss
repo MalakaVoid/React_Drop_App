@@ -1,0 +1,30 @@
+@media (min-width: 1025px){
+    .leave_comment_form{
+        @apply w-[350px];
+    }
+}
+@media (max-width: 1024px){
+    .leave_comment_form{
+        @apply w-[350px];
+    }
+}
+@media (max-width: 650px){
+    .leave_comment_form{
+        @apply w-full;
+    }
+}
+.leave_comment_form{
+    @apply flex flex-col items-center;
+
+    h3{
+        @apply text-[18px] text-[var(--main-black)] font-bold uppercase mb-[15px];
+    }
+
+    &_input{
+        @apply relative mb-[20px] w-full;
+    }
+
+    &_button{
+        @apply mt-[5px];
+    }
+}

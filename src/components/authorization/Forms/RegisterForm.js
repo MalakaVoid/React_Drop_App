@@ -1,6 +1,6 @@
 import Button from "../../common/Button";
 import Input from "../../common/Input";
-import './RegisterForm.css';
+import './RegisterForm.scss';
 import {auth_button_style} from "../../ui/ButtonStyle";
 
 export default function RegisterForm() {

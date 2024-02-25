@@ -1,6 +1,6 @@
 import Button from "../../common/Button";
 import Input from "../../common/Input";
-import './LogInForm.css';
+import './LoginForm.scss';
 import {auth_button_style} from "../../ui/ButtonStyle";
 
 export default function LogInForm() {

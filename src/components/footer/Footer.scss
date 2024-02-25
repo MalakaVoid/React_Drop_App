@@ -1,0 +1,78 @@
+@media (min-width: 1025px){
+    .footer{
+        &_container{
+            @apply flex-row justify-between;
+        }
+        &_links{
+            @apply flex-row  justify-between w-1/2;
+        }
+        &_form_container{
+            @apply w-1/2;
+        }
+    }
+}
+@media (max-width: 1024px){
+    .footer{
+        &_container{
+            @apply flex-col-reverse justify-normal gap-[40px] items-center;
+        }
+        &_links{
+            @apply flex-row  justify-center w-full gap-[20px];
+        }
+        &_form_container{
+            @apply w-1/2;
+        }
+    }
+}
+@media (max-width: 650px){
+    .footer{
+        &_container{
+            @apply flex-col-reverse justify-normal items-center;
+        }
+        &_links{
+            @apply flex-col  justify-center w-full gap-[10px] items-center text-center;
+        }
+        &_form_container{
+            @apply w-full;
+        }
+    }
+}
+.footer{
+    @apply w-full box-border bg-[var(--footer-bg)] mt-[20px] px-[var(--side-paddings)] pt-[100px] pb-[15px];
+
+    &_container{
+        @apply w-full mb-[100px] flex;
+    }
+
+    &_links{
+        @apply flex;
+
+        & > div{
+            @apply w-[240px] flex flex-col;
+
+            h3{
+                @apply text-[18px] text-[var(--main-black)] font-bold uppercase mb-[10px];
+            }
+
+            a{
+                @apply text-[16px] text-[#909090] inline-block mb-[8px] cursor-pointer;
+
+                &:hover{
+                    @apply text-[var(--main-black)] duration-[0.25s];
+                }
+            }
+        }
+    }
+
+    &_form_container{
+        @apply flex flex-col items-center;
+    }
+
+    &_bottom{
+        @apply flex justify-between w-full;
+
+        &_laws{
+            @apply font-bold;
+        }
+    }
+}

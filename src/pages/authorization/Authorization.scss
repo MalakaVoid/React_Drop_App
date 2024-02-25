@@ -1,0 +1,83 @@
+@media (min-width: 1025px){
+    .authorization{
+        @apply justify-end;
+
+        &_bg_image_wrapper{
+            @apply w-1/2;
+        }
+
+        &_content_wrapper{
+            @apply w-1/2 mt-[25vh];
+        }
+    }
+}
+@media (max-width: 1024px){
+    .authorization{
+        &_bg_image_wrapper{
+            @apply w-full;
+        }
+
+        &_content_wrapper{
+            @apply w-full mt-[25vh];
+        }
+        &_content{
+            @apply p-[30px];
+        }
+    }
+}
+@media (max-width: 650px){
+    .authorization{
+        &_bg_image_wrapper{
+            @apply w-full hidden;
+        }
+
+        &_content_wrapper{
+            @apply w-full mt-0;
+        }
+        &_content{
+            @apply p-[30px];
+        }
+    }
+}
+
+.authorization{
+    @apply flex w-full min-h-screen h-full
+    mt-0 relative top-0;
+
+    &_bg_image_wrapper{
+        @apply h-full absolute top-0 left-0 overflow-hidden bg-[var(--main-black)] z-[-10];
+
+        img{
+            @apply min-h-full min-w-full object-cover opacity-[0.5];
+        }
+    }
+
+    &_content_wrapper{
+        @apply mb-[20px];
+    }
+
+    &_content{
+        @apply flex flex-col gap-[20px] max-w-[400px] w-full mx-auto bg-[var(--white-main)];
+
+        &_logo{
+            @apply block w-full h-[80px] bg-blue-400;
+        }
+
+        &_links{
+            @apply flex w-full text-[length:var(--text-main)] font-semibold;
+
+            &_login,
+            &_sign_in{
+                @apply block w-1/2 uppercase text-center relative cursor-pointer;
+
+                &::after{
+                    @apply content-[""] absolute top-0 left-0 block w-full h-[1px] bg-[var(--main-black)];
+                }
+
+                &.active::after{
+                    @apply scale-y-[3] transition-transform duration-[0.1s];
+                }
+            }
+        }
+    }
+}

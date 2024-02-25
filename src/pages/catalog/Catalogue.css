@@ -1,5 +1,5 @@
 @media (min-width: 1025px) {
-    main{
+    .catalogue{
         margin-top: 70px;
     }
     .catalogue .catalogue_products{
@@ -7,7 +7,7 @@
     }
 }
 @media (max-width: 1024px) {
-    main{
+    .catalogue{
         margin-top: 70px;
     }
     .catalogue .catalogue_products{
@@ -16,7 +16,7 @@
     
 }
 @media (max-width: 650px) {
-    main{
+    .catalogue{
         margin-top: 55px;
     }
     .catalogue .catalogue_products{

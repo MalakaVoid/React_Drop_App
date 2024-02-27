@@ -1,0 +1,92 @@
+@media (min-width: 1025px){
+    .product_card{
+        @apply w-[453.25px] h-[700px] max-w-[453.25px] p-[10px];
+
+        &_image_wrapper{
+            @apply h-[560px];
+        }
+        &_title{
+            @apply mt-[15px] leading-[24px] font-medium;
+        }
+    }
+}
+@media (max-width: 1024px) and (min-width: 651px){
+    .product_card{
+        @apply h-auto w-full max-w-full p-0;
+
+        &_image_wrapper{
+            @apply h-max;
+        }
+    }
+}
+@media (max-width: 650px){
+    .product_card{
+        @apply w-[calc(50%-5px)] h-max p-0;
+
+        &_image_wrapper{
+            @apply h-4/5;
+        }
+    }
+}
+.product_card{
+    @apply box-border bg-[var(--white-main)] relative;
+
+    &:hover > *{
+        @apply z-[12];
+    }
+    &:hover &_openner{
+        @apply visible flex border border-solid border-[var(--main-black)] z-[10];
+    }
+
+    &_image_wrapper{
+        @apply w-full relative;
+    }
+
+    &_title{
+        @apply text-[length:var(--text-main)] text-[var(--main-black)] relative;
+    }
+
+    &_article{
+        @apply text-[var(--sup-black)] text-[14px] leading-[18px] font-thin relative;
+    }
+
+    &_divider{
+        @apply mt-[15px] bg-[var(--main-black)] w-full h-[1px] relative;
+    }
+
+    &_price{
+        @apply text-[var(--main-black)] font-medium text-[length:var(--text-main)] leading-[24px]
+        mt-[15px] relative;
+
+        &_button{
+            @apply text-[var(--main-black)] font-medium text-[length:var(--text-main)]
+            inline-block px-[12px] cursor-pointer
+            border border-solid border-[var(--main-black)];
+
+            &:hover{
+                @apply duration-[0.25s] text-[var(--white-main)] bg-[var(--main-black)];
+            }
+        }
+    }
+
+    &_button{
+        @apply mt-[15px] w-full;
+    }
+
+    &_size_values{
+        @apply w-full;
+    }
+
+    &_openner{
+        @apply absolute top-0 left-0 hidden flex-col justify-end w-full h-[760px] box-border
+        p-[10px] bg-[var(--white-main)] z-[10];
+    }
+
+    &_buttons_wrapper{
+        @apply flex justify-between items-center mt-[10px];
+    }
+
+    &_favorite_button{
+        @apply size-[20px] mr-[1px]
+    }
+}

@@ -1,0 +1,105 @@
+.multi_range_swiper{
+    @apply mt-[10px] relative;
+
+    .slider{
+        @apply relative w-4/5;
+
+        &__track,
+        &__range,
+        &__left-value,
+        &__right-value{
+            @apply absolute;
+        }
+
+        &__track,
+        &__range{
+            @apply h-[3px] rounded-[3px];
+        }
+
+        &__track{
+            @apply bg-[var(--sup-black)] w-full z-[1];
+        }
+
+        &__range{
+            @apply bg-[var(--main-black)] z-[2];
+        }
+
+        &__left-value,
+        &__right-value{
+            @apply text-[var(--main-black)] text-[length:var(--text-main)] mt-[10px];
+        }
+
+        &__left-value{
+            @apply left-0;
+        }
+
+        &__right-value{
+            @apply right-[-15px];
+        } 
+    }
+
+    // .thumb,
+    // .thumb::-webkit-slider-thumb {
+    //   -webkit-appearance: none;
+    //   -webkit-tap-highlight-color: transparent;
+    // }
+
+    // .thumb{
+        // @apply pointer-events-none absolute h-0 w-4/5 outline-none;
+    //     pointer-events: none;
+    //     position: absolute;
+    //     height: 0;
+    //     width: 80%;
+    //     outline: none;
+    // }
+
+    // .thumb--left {
+    //     @apply z-[3];
+    // }
+
+    // .thumb--right {
+    //     @apply z-[4];
+    // }
+
+    // .thumb::-webkit-slider-thumb,
+    // .thumb::-moz-range-thumb {
+    //     background-color: var(--white-main);
+    //     border: solid 1px var(--main-black);
+    //     border-radius: 50%;
+    //     cursor: pointer;
+    //     height: 25px;
+    //     width: 25px;
+    //     margin-top: 2px;
+    //     pointer-events: all;
+    //     position: relative;
+    // }
+    .thumb,
+    .thumb::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    .thumb {
+        @apply pointer-events-none absolute h-0 w-4/5 outline-none;
+    }
+    
+    .thumb--left {
+        @apply z-[3];
+    }
+    
+    .thumb--right {
+        @apply z-[4];
+    }
+    
+    .thumb::-webkit-slider-thumb {
+        @apply bg-[var(--white-main)] border border-solid border-[var(--main-black)]
+        rounded-[50%] cursor-pointer size-[25px] mt-[2px] relative;
+        pointer-events: all;
+    }
+    
+    .thumb::-moz-range-thumb {
+        @apply bg-[var(--white-main)] border border-solid border-[var(--main-black)]
+        rounded-[50%] cursor-pointer size-[25px] mt-[2px] relative;
+        pointer-events: all;
+    }
+}

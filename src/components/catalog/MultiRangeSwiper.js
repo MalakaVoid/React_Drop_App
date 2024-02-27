@@ -1,4 +1,4 @@
-import './MultiRangeSwiper.css';
+import './MultiRangeSwiper.scss';
 import React, { useCallback, useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 
@@ -42,7 +42,7 @@ const MultiRangeSlider = ({ min, max, onChange, name }) => {
     }, [minVal, maxVal, onChange]);
   
     return (
-      <div className="container">
+      <div className="multi_range_swiper">
         <input
           type="range"
           name={'min'+name}

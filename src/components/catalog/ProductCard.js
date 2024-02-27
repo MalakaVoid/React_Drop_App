@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './ProductCard.css';
+import './ProductCard.scss';
 import SizePicker from '../common/SizePicker';
 import useWindowWidth from '../../hooks/useWindowWidth';
 import HeartIcon from '../../assets/icons/HeartIcon';
@@ -42,7 +42,7 @@ export default function ProductCard({product_info}){
                 </div>
                 <h3 className='product_card_title'><a href='/'>{product_info.title}</a></h3>
                 <p className='product_card_article'><a href='/'>{product_info.articul}</a></p>
-                <div className='product_card_devider'/>
+                <div className='product_card_divider'/>
                 <div className='product_card_price'>{product_info.price} ₽</div>
                 <div className='product_card_openner'>
                     <div className='product_card_size_values'>

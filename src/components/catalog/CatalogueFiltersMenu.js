@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import FiltersIcon from '../../assets/icons/FiltersIcon';
 import BgExitBlock from '../header/menuPanel/BgExitBlock';
-import './CatalogueFiltersMenu.css';
+import './CatalogueFiltersMenu.scss';
 import { CSSTransition } from 'react-transition-group';
 import CloseIcon from '../../assets/icons/CloseIcon';
 import { colors } from '../../assets/TEST_DATA/Colors';

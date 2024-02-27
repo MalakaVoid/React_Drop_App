@@ -1,6 +1,6 @@
 @media (min-width: 1025px){
     .custom_bunner_swiper{
-        height: calc(100vh - var(--header-height));
+        height: calc(100vh);
 
         .swiper-pagination-bullet{
             @apply w-[15px] h-[15px];

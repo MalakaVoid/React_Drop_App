@@ -1,8 +1,18 @@
+import Footer from "../../components/footer/Footer";
+import Header from "../../components/header/Header";
+import ProductContent from "../../components/product/ProductContent";
+import { productInfo } from "../../assets/TEST_DATA/ProductForProduct";
+
+
 export default function Product() {
     return (
-      <div>
-          ASDKJASHKJDASJK
-      </div>
+      <>
+        <Header />
+        <div className="product_info_wrapper">
+          <ProductContent product_info={productInfo}/>
+        </div>
+        <Footer />
+      </>
     );
   }
   

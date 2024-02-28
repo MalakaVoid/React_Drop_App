@@ -42,7 +42,8 @@ export const catalogue_products = [
         articul: 'AR123AA',
         price: new Intl.NumberFormat('ru-RU').format(5999),
         sizes: ['XXS','XS', 'S', 'M', 'L', 'XL'],
-        img: [redDress1, redDress2, redDress3, redDress4, redDress5, redDress6, redDress7]
+        img: [redDress1, redDress2, redDress3, redDress4, redDress5, redDress6, redDress7],
+        link: "/product"
     },
     {
         id: 2,
@@ -50,7 +51,8 @@ export const catalogue_products = [
         articul: '12312AF2',
         price: new Intl.NumberFormat('ru-RU').format(7999),
         sizes: ['XS', 'S', 'M', 'L', 'XL'],
-        img: [RedDress1, RedDress2, RedDress3, RedDress4, RedDress5, RedDress6, RedDress7]
+        img: [RedDress1, RedDress2, RedDress3, RedDress4, RedDress5, RedDress6, RedDress7],
+        link: "/product"
     },
     {
         id: 2,
@@ -58,7 +60,8 @@ export const catalogue_products = [
         articul: '12312AF2',
         price: new Intl.NumberFormat('ru-RU').format(7999),
         sizes: ['XS', 'S', 'M', 'L', 'XL'],
-        img: [WhiteDress1, WhiteDress2, WhiteDress3, WhiteDress4, WhiteDress5, WhiteDress6, RedDress7]
+        img: [WhiteDress1, WhiteDress2, WhiteDress3, WhiteDress4, WhiteDress5, WhiteDress6, RedDress7],
+        link: "/product"
     },
     {
         id: 2,
@@ -66,7 +69,8 @@ export const catalogue_products = [
         articul: '12312AF2',
         price: new Intl.NumberFormat('ru-RU').format(7999),
         sizes: ['XS', 'S', 'M', 'L', 'XL'],
-        img: [DarkDress1, DarkDress2, DarkDress3, DarkDress4, DarkDress5, DarkDress6, DarkDress7]
+        img: [DarkDress1, DarkDress2, DarkDress3, DarkDress4, DarkDress5, DarkDress6, DarkDress7],
+        link: "/product"
     },
     {
         id: 2,
@@ -74,7 +78,8 @@ export const catalogue_products = [
         articul: '12312AF2',
         price: new Intl.NumberFormat('ru-RU').format(7999),
         sizes: ['XS', 'S', 'M', 'L', 'XL'],
-        img: [RedDress1, RedDress2, RedDress3, RedDress4, RedDress5, RedDress6, RedDress7]
+        img: [RedDress1, RedDress2, RedDress3, RedDress4, RedDress5, RedDress6, RedDress7],
+        link: "/product"
     },
     {
         id: 2,
@@ -82,7 +87,8 @@ export const catalogue_products = [
         articul: '12312AF2',
         price: new Intl.NumberFormat('ru-RU').format(7999),
         sizes: ['XS', 'S', 'M', 'L', 'XL'],
-        img: [WhiteDress1, WhiteDress2, WhiteDress3, WhiteDress4, WhiteDress5, WhiteDress6, RedDress7]
+        img: [WhiteDress1, WhiteDress2, WhiteDress3, WhiteDress4, WhiteDress5, WhiteDress6, RedDress7],
+        link: "/product"
     },
     {
         id: 2,
@@ -90,7 +96,8 @@ export const catalogue_products = [
         articul: '12312AF2',
         price: new Intl.NumberFormat('ru-RU').format(7999),
         sizes: ['XS', 'S', 'M', 'L', 'XL'],
-        img: [DarkDress1, DarkDress2, DarkDress3, DarkDress4, DarkDress5, DarkDress6, DarkDress7]
+        img: [DarkDress1, DarkDress2, DarkDress3, DarkDress4, DarkDress5, DarkDress6, DarkDress7],
+        link: "/product"
     },
     
   ];

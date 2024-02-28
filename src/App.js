@@ -15,6 +15,7 @@ function App() {
           <Route path="/account" element={<Account />} />
           <Route path="/login" element={<Authorization />} />
           <Route path="/catalogue" element={<Catalogue />} />
+          <Route path="/product" element={<Product />} />
         </Routes>
       </main>
     </BrowserRouter>

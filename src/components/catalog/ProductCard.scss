@@ -55,7 +55,7 @@
     }
 
     &_price{
-        @apply text-[var(--main-black)] font-medium text-[length:var(--text-main)] leading-[24px]
+        @apply block text-[var(--main-black)] font-medium text-[length:var(--text-main)] leading-[24px]
         mt-[15px] relative;
 
         &_button{

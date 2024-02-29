@@ -1,0 +1,149 @@
+.product{
+    @apply flex flex-col w-full px-[var(--side-paddings)] box-border;
+
+    &_nav_bar{
+        @apply w-full mb-[20px];
+
+        &_links{
+            @apply text-[var(--sup-black)] text-[16px];
+
+            a{
+                @apply cursor-pointer;
+            }
+
+            a.active{
+                @apply no-underline text-[var(--main-black)];
+            }
+
+            a:hover{
+                @apply underline;
+            }
+        }
+    }
+
+    &_wrapper{
+        @apply flex flex-row w-full h-[800px];
+    }
+
+    &_images{
+        @apply basis-[60%] bg-red-400 h-full;
+    }
+
+    &_content{
+        @apply h-full basis-[40%] px-[20px] box-border bg-[var(--footer-bg)] box-border py-[40px];
+    }
+
+    &_title_bar{
+        @apply flex flex-row justify-between items-center;
+
+        &_title{
+            @apply text-[length:var(--text-title)] block font-medium;
+        }
+
+        &_article{
+            @apply text-[var(--sup-black)] text-[length:var(--text-main)] block;
+        }
+    }
+
+    &_price{
+        @apply text-[length:var(--text-main)] font-medium py-[10px] box-border;
+    }
+
+    &_colors{
+        @apply flex flex-row gap-[5px] w-full;
+
+        &_item{
+            @apply size-[30px];
+
+            & > input{
+                @apply hidden;
+            }
+
+            & > input:checked ~ a{
+                @apply bg-black;
+            }
+
+            & > a{
+                @apply box-border border border-solid border-[var(--main-black)] size-full flex items-center justify-center;
+
+                & > div{
+                    @apply size-[70%];
+                }
+            }
+        }
+    }
+
+    &_size_title{
+        @apply text-[length:var(--text-main)] mt-[20px] font-normal text-[var(--main-black)];
+    }
+
+    &_sizes{
+        @apply flex flex-row gap-[5px] w-full mt-[10px];
+
+        &_item{
+            @apply w-[60px] box-border;
+
+            & > input{
+                @apply hidden;
+            }
+
+            & > input:checked ~ div{
+                @apply bg-[var(--main-black)] text-[var(--white-main)] duration-[0.2s];
+            }
+
+            & > div{
+                @apply size-full box-border border border-solid border-[var(--main-black)]
+                py-[4px] text-[var(--main-black)] text-[18px] text-center;
+            }
+        }
+    }
+
+    &_size_link{
+        @apply inline-block cursor-pointer mt-[10px] underline text-[15px] text-[var(--sup-black)] block;
+
+        &:hover{
+            @apply text-[var(--main-black)];
+        }
+    }
+
+    &_buttons_container{
+        @apply flex flex-row mt-[20px] gap-[10px] items-center;
+    }
+
+    &_button_to_cart{
+        @apply w-1/2 h-[50px] flex justify-center items-center text-[length:var(--text-main)] text-[var(--main-black)]
+        box-border border border-solid border-[var(--main-black)];
+
+        &:hover{
+            @apply bg-[var(--main-black)] text-[var(--white-main)] duration-[0.25s];
+        }
+    }
+
+    &_button_favourite{
+        @apply size-[35px];
+
+        & path{
+            stroke-width: 2px;
+        }
+    }
+
+    &_divider{
+        @apply h-[2px] w-full bg-[var(--main-black)] my-[20px];
+    }
+
+    &_about,
+    &_delivery{
+        @apply flex flex-col w-full;
+
+        &_title{
+            @apply text-[length:var(--text-main)] font-normal text-[var(--main-black)];
+        }  
+
+        &_description{
+            @apply text-[length:var(--text-mini)];
+        }
+    }
+    &_delivery{
+        @apply mt-[20px];
+    }
+}

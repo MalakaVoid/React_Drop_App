@@ -1,0 +1,41 @@
+@mixin arrow_common(){
+    @apply z-[9] absolute top-1/2 -translate-y-1/2 size-[50px] cursor-pointer;
+}
+
+.product_page_swiper{
+    @apply size-full relative;
+
+    &_slide{
+        @apply w-1/2;
+
+        img{
+            @apply object-cover w-full h-full;
+        }
+    }
+
+    &_left{
+        @include arrow_common();
+        @apply left-0;
+        
+        path{
+            @apply fill-[var(--sup-black)];
+        }
+
+        &:hover path{
+            @apply fill-[var(--main-black)] duration-[0.25s];
+        }
+    }
+
+    &_right{
+        @include arrow_common();
+        @apply right-0 rotate-180;
+
+        path{
+            @apply fill-[var(--sup-black)];
+        }
+
+        &:hover path{
+            @apply fill-[var(--main-black)] duration-[0.25s];
+        }
+    }
+}

@@ -9,9 +9,12 @@ import DarkDress7 from '../../assets/Dreses/DarkDress/7.jfif';
 export const productInfo =     {
     id: 2,
     title: 'Коктельное платье',
-    articul: '12312AF2',
+    article: '12312AF2',
     price: new Intl.NumberFormat('ru-RU').format(7999),
+    colors: ['black','green', 'blue', 'white'],
+    current_color: 0,
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
     img: [DarkDress1, DarkDress2, DarkDress3, DarkDress4, DarkDress5, DarkDress6, DarkDress7],
-    link: "/product"
+    link: "/product",
+    description: "Артикул: 231312312\nСостав: 100% кал, 50% хз что\nСтрана-производитель: РФ\nУход: Ручная стирка в холодной воде, не отбеливать, машинная сушка запрещена, глажение при 110, профессиональная сухая чистка\nПараметры: вырез горловины: V образный; отложной воротничок\nСилуэт: приталенный; тип карманов: без карманов; стиль: вечерний, повседневный\nДлина платья/юбки: ниже колена"
 }

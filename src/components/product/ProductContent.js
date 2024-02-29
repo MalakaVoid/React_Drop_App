@@ -1,4 +1,6 @@
 import HeartIcon from "../../assets/icons/HeartIcon";
+import ImageSwiper from "./ImageSwiper";
+import './ProductContent.scss';
 
 export default function ProductContent({product_info}) {
     return(
@@ -16,7 +18,7 @@ export default function ProductContent({product_info}) {
             </div>
             <div className="product_wrapper">
                 <div className="product_images">
-
+                    <ImageSwiper images={product_info.img}/>
                 </div>
                 <div className="product_content">
                     <div className="product_title_bar">
@@ -24,27 +26,44 @@ export default function ProductContent({product_info}) {
                         <span className="product_title_bar_article">{product_info.article}</span>
                     </div>
                     <div className="product_price">
-                        650 790 ₽
+                        {product_info.price} ₽
                     </div>
                     <div className="product_colors">
-                        <label className="product_colors_item">
-                            <input type="radio" name="" />
-                            <div>
-                                <div></div>
-                            </div>
-                        </label>
+
+                    {
+                        product_info.colors.map((color, index)=>{
+                            let colorClass = "bg-" + color;
+                            let isChecked = index == product_info.current_color;
+                            return(
+                                <label key={index} className="product_colors_item">
+                                    <input type="radio" name="color" checked={isChecked} value={index}/>
+                                    <a>
+                                        <div style={{backgroundColor: color}}></div>
+                                    </a>
+                                </label>
+                            )
+                        })
+                    }
                     </div>
                     <div className="product_size_title">Размер</div>
                     <div className="product_sizes">
-                        <label className="product_sizes_item">
-                            <input type="radio" name="" />
-                            <div>
-                                XS
-                            </div>
-                        </label>
+                    {
+                        product_info.sizes.map((size, index)=>{
+                            return(
+                                <label key={index} className="product_sizes_item">
+                                    <input type="radio" name="size" value={index}/>
+                                    <div>
+                                        {size}
+                                    </div>
+                                </label>
+                            )
+                        })
+                    }
                     </div>
-                    <div className="product_sizes_link">
-                        Таблица размеров
+                    <div>
+                        <a className="product_size_link">
+                            Таблица размеров
+                        </a>
                     </div>
                     <div className="product_buttons_container">
                         <button className="product_button_to_cart">В КОРЗИНУ</button>
@@ -53,7 +72,20 @@ export default function ProductContent({product_info}) {
                         </div>
                     </div>
 
-                    <hr />
+                    <hr className="product_divider" />
+
+                    <div className="product_about">
+                        <p className="product_about_title">О товаре</p>
+                        <p className="product_about_description whitespace-pre-line" v-html="replaceWithBr()">
+                            {product_info.description}
+                        </p>
+                    </div>
+                    <div className="product_delivery">
+                        <p className="product_delivery_title">Доставка</p>
+                        <p className="product_delivery_description">
+                            Бесплатная доставка при заказе от 4000 руб.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -31,6 +31,7 @@ code {
   :root{
     /* TEXT */
     --text-title: 32px;
+    --text-medium: 24px;
     --text-main: 20px;
     --text-mini: 16px;
     /* MARGINS */
@@ -41,6 +42,7 @@ code {
 @media (max-width: 1024px){
   :root{
     --text-title: 28px;
+    --text-medium: 22px;
     --text-main: 20px;
     --text-mini: 16px;
     /* MARGINS */
@@ -52,6 +54,7 @@ code {
 @media (max-width: 650px){
   :root{
     --text-title: 20px;
+    --text-medium: 18px;
     --text-main: 16px;
     --text-mini: 16px;
     /* MARGINS */

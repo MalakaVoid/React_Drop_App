@@ -1,3 +1,18 @@
+@media (min-width: 1024px){
+    .product_info_wrapper{
+        @apply mt-[var(--header-height)];
+    }
+}
+@media (max-width: 1024px){
+    .product_info_wrapper{
+        @apply mt-[calc(var(--header-height)+20px)];
+    }
+}
+@media (max-width: 760px){
+    .product_info_wrapper{
+        @apply mt-[var(--header-height)];
+    }
+}
 .product_info_wrapper{
-    @apply mt-[var(--header-height)] mb-[80px];
+    @apply mb-[80px];
 }

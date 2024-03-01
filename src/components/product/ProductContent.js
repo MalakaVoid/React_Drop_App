@@ -21,12 +21,14 @@ export default function ProductContent({product_info}) {
                     <ImageSwiper images={product_info.img}/>
                 </div>
                 <div className="product_content">
-                    <div className="product_title_bar">
-                        <h2 className="product_title_bar_title">{product_info.title}</h2>
-                        <span className="product_title_bar_article">{product_info.article}</span>
-                    </div>
-                    <div className="product_price">
-                        {product_info.price} ₽
+                    <div className="product_title_bar_wrapper">
+                        <div className="product_title_bar">
+                            <h2 className="product_title_bar_title">{product_info.title}</h2>
+                            <span className="product_title_bar_article">{product_info.article}</span>
+                        </div>
+                        <div className="product_price">
+                            {product_info.price} ₽
+                        </div>
                     </div>
                     <div className="product_colors">
 

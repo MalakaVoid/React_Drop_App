@@ -3,6 +3,10 @@
         &_slide{
             @apply w-1/2;
         }
+        &_right,
+        &_left{
+            @apply size-[50px];
+        }
     }
 }
 @media (max-width: 1024px){
@@ -10,10 +14,26 @@
         &_slide{
             @apply w-full;
         }
+        &_right,
+        &_left{
+            @apply size-[50px];
+        }
+    }
+}
+@media (max-width: 1024px){
+    .product_page_swiper{
+        &_slide{
+            @apply w-full;
+        }
+
+        &_right,
+        &_left{
+            @apply size-[30px];
+        }
     }
 }
 @mixin arrow_common(){
-    @apply z-[9] absolute top-1/2 -translate-y-1/2 size-[50px] cursor-pointer;
+    @apply z-[9] absolute top-1/2 -translate-y-1/2 cursor-pointer;
 }
 
 .product_page_swiper{

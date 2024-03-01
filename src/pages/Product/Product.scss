@@ -1,18 +1,15 @@
 @media (min-width: 1024px){
     .product_info_wrapper{
-        @apply mt-[var(--header-height)];
+        @apply mt-[var(--header-height)] mb-[80px];
     }
 }
 @media (max-width: 1024px){
     .product_info_wrapper{
-        @apply mt-[calc(var(--header-height)+20px)];
+        @apply mt-[calc(var(--header-height)+20px)] mb-[80px];
     }
 }
 @media (max-width: 760px){
     .product_info_wrapper{
-        @apply mt-[var(--header-height)];
+        @apply mt-[var(--header-height)] mb-[40px];
     }
-}
-.product_info_wrapper{
-    @apply mb-[80px];
 }

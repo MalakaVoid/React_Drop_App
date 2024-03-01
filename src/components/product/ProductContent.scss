@@ -17,10 +17,18 @@
             @apply basis-[40%] py-[40px] px-[20px];
         }
 
+        &_title_bar_wrapper{
+            @apply flex-col;
+        }
+
         &_title_bar{
             &_article{
                 @apply block;
             }
+        }
+
+        &_price{
+            @apply text-[length:var(--text-medium)]  py-[10px];
         }
 
         &_size_title{
@@ -71,11 +79,20 @@
             @apply basis-1/2 py-[20px] px-[20px];
         }
 
+        &_title_bar_wrapper{
+            @apply flex-col;
+        }
+
         &_title_bar{
             &_article{
                 @apply hidden;
             }
         }
+
+        &_price{
+            @apply text-[length:var(--text-medium)]  py-[10px];
+        }
+
         &_size_title{
             @apply mt-[10px];
         }
@@ -123,6 +140,20 @@
         &_delivery{
             @apply mt-[10px];
         }
+
+        &_title_bar_wrapper{
+            @apply flex-row justify-between items-center mb-[20px];
+        }
+
+        &_title_bar{
+            &_title{
+                @apply uppercase;
+            }
+        }
+
+        &_price{
+            @apply text-[length:var(--text-title)]  py-0;
+        }
     }
 }
 .product{
@@ -160,7 +191,9 @@
     &_content{
         @apply h-full box-border bg-[var(--footer-bg)] box-border;
     }
-
+    &_title_bar_wrapper{
+        @apply flex w-full box-border;
+    }
     &_title_bar{
         @apply flex flex-row justify-between items-center;
 
@@ -171,10 +204,15 @@
         &_article{
             @apply text-[var(--sup-black)] text-[length:var(--text-main)];
         }
+        @media (max-width: 1150px) {
+            .product_title_bar_article{
+                @apply hidden
+            }
+        }
     }
 
     &_price{
-        @apply text-[length:var(--text-medium)] font-medium py-[10px] box-border;
+        @apply font-medium box-border;
     }
 
     &_colors{
